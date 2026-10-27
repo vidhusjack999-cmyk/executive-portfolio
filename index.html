@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080d19">
+<meta name="theme-color" content="#f8fafc">
 <meta name="description" content="Vidyalakshmi Raghuraman - QA Leadership, AI, Quality Engineering and Business Analytics">
 <title>Vidyalakshmi Raghuraman | QA Leadership & AI</title>
 
 <style>
 :root {
-    --bg: #080d19;
-    --surface: #111a2e;
-    --text: #f3f6ff;
-    --muted: #aab5cf;
-    --line: rgba(173,190,226,.16);
-    --cyan: #67e8f9;
-    --purple: #a78bfa;
-    --gold: #f2cc8f;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --line: #cbd5e1;
+    --cyan: #0284c7;
+    --purple: #7c3aed;
+    --gold: #b45309;
+    --card-bg: #ffffff;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -32,9 +33,9 @@ html {
 
 body {
     font-family: Inter, "Segoe UI", Arial, sans-serif;
-    background:
-        radial-gradient(ellipse at 15% 0%, rgba(103,232,249,.10), transparent 34rem),
-        radial-gradient(ellipse at 85% 10%, rgba(167,139,250,.14), transparent 38rem),
+    background: 
+        radial-gradient(ellipse at 15% 0%, rgba(2,132,199,.06), transparent 34rem),
+        radial-gradient(ellipse at 85% 10%, rgba(124,58,237,.06), transparent 38rem),
         var(--bg);
     color: var(--text);
     line-height: 1.7;
@@ -61,7 +62,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(8,13,25,.90);
+    background: rgba(248,250,252,.92);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--line);
 }
@@ -79,6 +80,7 @@ nav {
     align-items: center;
     gap: 12px;
     font-weight: 800;
+    color: #0f172a;
 }
 
 .brand-mark {
@@ -87,7 +89,7 @@ nav {
     width: 42px;
     height: 42px;
     border-radius: 13px;
-    color: #080d19;
+    color: #ffffff;
     background: linear-gradient(135deg,var(--cyan),var(--purple));
 }
 
@@ -129,13 +131,14 @@ nav {
 }
 
 .btn.primary {
-    color: #080d19;
-    background: linear-gradient(120deg,var(--cyan),#b7a0ff);
+    color: #ffffff;
+    background: linear-gradient(120deg,var(--cyan),var(--purple));
     border: none;
 }
 
 .btn.secondary {
-    background: rgba(255,255,255,.035);
+    background: rgba(0,0,0,.03);
+    color: #1e293b;
 }
 
 /* HERO */
@@ -154,10 +157,10 @@ nav {
 .eyebrow {
     display: inline-block;
     padding: 7px 13px;
-    border: 1px solid var(--line);
+    border: 1px solid #cbd5e1;
     border-radius: 50px;
-    color: #d9d5ff;
-    background: rgba(167,139,250,.08);
+    color: #475569;
+    background: rgba(124,58,237,.06);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -168,11 +171,12 @@ h1 {
     font-size: clamp(42px,6vw,78px);
     line-height: 1.05;
     letter-spacing: -3px;
+    color: #0f172a;
 }
 
 .gradient-text {
     color: var(--cyan);
-    background: linear-gradient(100deg,#f4f7ff,#a8a0ff,var(--cyan));
+    background: linear-gradient(100deg,#0f172a,#7c3aed,var(--cyan));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -205,8 +209,8 @@ h1 {
     padding: 28px;
     border: 1px solid var(--line);
     border-radius: 26px;
-    background: linear-gradient(145deg,#16223c,#0d1425);
-    box-shadow: 0 24px 70px rgba(0,0,0,.25);
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(15,23,42,.06);
 }
 
 .avatar {
@@ -215,8 +219,8 @@ h1 {
     width: 58px;
     height: 58px;
     border-radius: 17px;
-    color: #080d19;
-    background: linear-gradient(135deg,var(--gold),#f7e7c3);
+    color: #ffffff;
+    background: linear-gradient(135deg,#b45309,#d97706);
     font-size: 21px;
     font-weight: 900;
 }
@@ -225,14 +229,16 @@ h1 {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 50px;
-    color: #a7f3d0;
-    background: rgba(110,231,183,.08);
+    color: #047857;
+    background: rgba(16,185,129,.1);
     font-size: 11px;
+    font-weight: 600;
 }
 
 .profile-card h2 {
     margin: 20px 0 5px;
     font-size: 25px;
+    color: #0f172a;
 }
 
 .profile-card p {
@@ -250,12 +256,13 @@ h1 {
     padding: 16px;
     border: 1px solid var(--line);
     border-radius: 15px;
-    background: rgba(255,255,255,.025);
+    background: #f8fafc;
 }
 
 .stat strong {
     display: block;
     font-size: 27px;
+    color: #0f172a;
 }
 
 .stat span {
@@ -287,6 +294,7 @@ section.content-section {
     font-size: clamp(30px,4vw,48px);
     line-height: 1.15;
     letter-spacing: -1.5px;
+    color: #0f172a;
 }
 
 .section-intro {
@@ -306,7 +314,8 @@ section.content-section {
     padding: 25px;
     border: 1px solid var(--line);
     border-radius: 20px;
-    background: rgba(17,25,45,.78);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(15,23,42,.03);
 }
 
 .card-icon {
@@ -315,16 +324,17 @@ section.content-section {
     width: 45px;
     height: 45px;
     margin-bottom: 18px;
-    border: 1px solid rgba(103,232,249,.2);
+    border: 1px solid rgba(2,132,199,.2);
     border-radius: 13px;
     color: var(--cyan);
-    background: rgba(103,232,249,.07);
+    background: rgba(2,132,199,.06);
     font-size: 22px;
 }
 
 .card h3 {
     margin-bottom: 8px;
     font-size: 18px;
+    color: #0f172a;
 }
 
 .card p {
@@ -352,8 +362,8 @@ section.content-section {
     padding: 6px 10px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    color: #dce5fb;
-    background: rgba(255,255,255,.035);
+    color: #334155;
+    background: #f1f5f9;
     font-size: 12px;
 }
 
@@ -371,7 +381,8 @@ section.content-section {
     padding: 26px;
     border: 1px solid var(--line);
     border-radius: 20px;
-    background: rgba(17,25,45,.78);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(15,23,42,.03);
 }
 
 .exp-date {
@@ -382,6 +393,7 @@ section.content-section {
 
 .exp-row h3 {
     font-size: 20px;
+    color: #0f172a;
 }
 
 .meta {
@@ -391,7 +403,7 @@ section.content-section {
 }
 
 .exp-row p:not(.meta) {
-    color: #d4dced;
+    color: #334155;
     font-size: 14px;
 }
 
@@ -402,15 +414,17 @@ section.content-section {
     grid-template-columns: 1.1fr .9fr;
     gap: 25px;
     padding: 30px;
-    border: 1px solid rgba(167,139,250,.28);
+    border: 1px solid rgba(124,58,237,.25);
     border-radius: 24px;
-    background: linear-gradient(130deg,rgba(167,139,250,.09),rgba(103,232,249,.035));
+    background: linear-gradient(130deg,rgba(124,58,237,.04),rgba(2,132,199,.03));
+    box-shadow: 0 4px 12px rgba(15,23,42,.03);
 }
 
 .project-card h3, .project-detail h3 {
     margin: 8px 0 12px;
     font-size: 25px;
     line-height: 1.3;
+    color: #0f172a;
 }
 
 .project-card p, .project-detail p {
@@ -423,7 +437,7 @@ section.content-section {
     min-height: 230px;
     border: 1px solid var(--line);
     border-radius: 18px;
-    background: radial-gradient(circle,rgba(167,139,250,.2),transparent 65%);
+    background: radial-gradient(circle,rgba(124,58,237,.08),transparent 65%);
 }
 
 .orbit {
@@ -433,10 +447,11 @@ section.content-section {
     height: 145px;
     border: 1px solid var(--cyan);
     border-radius: 50%;
-    box-shadow: 0 0 35px rgba(103,232,249,.08);
+    box-shadow: 0 0 35px rgba(2,132,199,.08);
     font-size: 45px;
     color: var(--gold);
     position: relative;
+    background: #ffffff;
 }
 
 .orbit:before, .orbit:after {
@@ -457,13 +472,14 @@ section.content-section {
     padding: 28px;
     border: 1px solid var(--line);
     border-radius: 22px;
-    background: rgba(17,25,45,.78);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(15,23,42,.03);
 }
 
 .project-detail ul {
     padding-left: 22px;
     margin: 15px 0;
-    color: #d4dced;
+    color: #334155;
 }
 
 .project-detail li {
@@ -486,28 +502,30 @@ section.content-section {
     align-items: center;
     gap: 25px;
     padding: 25px;
-    border: 1px solid rgba(103,232,249,.22);
+    border: 1px solid rgba(2,132,199,.2);
     border-radius: 24px;
-    background: linear-gradient(130deg,rgba(103,232,249,.06),rgba(167,139,250,.08));
+    background: linear-gradient(130deg,rgba(2,132,199,.04),rgba(124,58,237,.04));
+    box-shadow: 0 4px 12px rgba(15,23,42,.03);
 }
 
 .video-frame {
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 16px;
-    background: #030711;
+    background: #0f172a;
 }
 
 .video-frame video {
     display: block;
     width: 100%;
     max-height: 500px;
-    background: #030711;
+    background: #0f172a;
 }
 
 .video-copy h3 {
     margin: 8px 0 12px;
     font-size: 25px;
+    color: #0f172a;
 }
 
 .video-copy p {
@@ -525,9 +543,10 @@ section.content-section {
 
 .contact-band {
     padding: clamp(28px,5vw,55px);
-    border: 1px solid rgba(103,232,249,.22);
+    border: 1px solid rgba(2,132,199,.2);
     border-radius: 25px;
-    background: linear-gradient(115deg,#122036,#171733);
+    background: linear-gradient(115deg,#e0f2fe,#ede9fe);
+    box-shadow: 0 4px 20px rgba(15,23,42,.04);
 }
 
 .contact-band h2 {
@@ -535,12 +554,13 @@ section.content-section {
     margin: 10px 0 15px;
     font-size: clamp(32px,4vw,52px);
     line-height: 1.15;
+    color: #0f172a;
 }
 
 .contact-band p {
     max-width: 750px;
     margin-bottom: 23px;
-    color: var(--muted);
+    color: #334155;
 }
 
 .contact-actions {
@@ -551,7 +571,7 @@ section.content-section {
 
 footer {
     padding: 25px 0;
-    color: #8491ad;
+    color: #64748b;
     font-size: 12px;
 }
 
@@ -666,6 +686,7 @@ footer .wrap {
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#dissertation">Dissertation</a>
             <a class="btn secondary" href="#contact">Let's Connect ↗</a>
         </div>
     </nav>
@@ -999,63 +1020,63 @@ footer .wrap {
     </div>
 </section>
 
-<!-- MBA PROJECT -->
+<!-- EXECUTIVE MBA DISSERTATION PRESENTATION -->
 
-<section class="content-section" id="mba-project">
+<section class="content-section" id="dissertation">
     <div class="wrap">
 
         <div class="section-head">
-            <p class="kicker">EXECUTIVE MBA · CAPSTONE PROJECT</p>
-            <h2 class="section-title">AI-driven customer segmentation.</h2>
+            <p class="kicker">EXECUTIVE MBA · FINAL PRESENTATION</p>
+            <h2 class="section-title">AI-Driven Customer Segmentation & Marketing Effectiveness</h2>
             <p class="section-intro">
-                Applying business analytics and AI techniques to explore
-                customer behavior and marketing performance in online retail.
+                Dissertation presentation submitted to PES University under the guidance of Akram Ali. Integrates secondary transactional data with primary survey perceptions.
             </p>
         </div>
 
-        <article class="project-detail">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+            <article class="card">
+                <h3>📊 Research Objectives & Methodology</h3>
+                <ul style="padding-left: 20px; margin-top: 10px; color: var(--muted); font-size: 14px;">
+                    <li style="margin-bottom: 8px;"><strong>Dual Approach:</strong> Combines primary survey responses (55 online shoppers via Google Forms) with secondary transactional behavior (UCI Online Retail II dataset).</li>
+                    <li style="margin-bottom: 8px;"><strong>Tools Used:</strong> KNIME Analytics Platform (data modeling/segmentation), Excel (data cleaning), and Tableau (dashboards).</li>
+                    <li style="margin-bottom: 8px;"><strong>Core Metrics:</strong> RFM Analysis (Recency, Frequency, Monetary), Customer Lifetime Value (CLV), and K-Means clustering[cite: 12].</li>
+                </ul>
+            </article>
 
-            <p class="project-type">Business Analytics · Marketing Intelligence</p>
+            <article class="card">
+                <h3>📈 Regression Analysis & Hypothesis Testing</h3>
+                <ul style="padding-left: 20px; margin-top: 10px; color: var(--muted); font-size: 14px;">
+                    <li style="margin-bottom: 8px;"><strong>H1 & H2 Supported (p < 0.05):</strong> AI-driven segmentation and personalized marketing positively influence customer engagement ($R^2 = 0.5861$) and purchase intention ($R^2 = 0.3943$)[cite: 12].</li>
+                    <li style="margin-bottom: 8px;"><strong>Key Drivers:</strong> Recommendation accuracy ($\beta = 0.5271$) and usefulness of personalized offers ($\beta = 0.3039$) are significant positive predictors[cite: 12].</li>
+                    <li style="margin-bottom: 8px;"><strong>Reliability:</strong> High internal consistency confirmed with a Cronbach’s alpha of 0.949[cite: 12].</li>
+                </ul>
+            </article>
+        </div>
 
-            <h3>
-                AI-Driven Customer Segmentation for Enhancing Marketing
-                Performance in the B2C Online Retail Industry
-            </h3>
-
-            <p>
-                This research project explores how AI-driven customer
-                segmentation can help online retailers improve marketing
-                relevance, customer engagement, and campaign performance.
-                It combines customer survey research with retail transaction
-                analysis to investigate the value of data-driven segmentation.
-            </p>
-
-            <div class="pills">
-                <span>Customer Segmentation</span>
-                <span>RFM Analysis</span>
-                <span>K-Means Clustering</span>
-                <span>Customer Lifetime Value</span>
-                <span>Regression Analysis</span>
-                <span>KNIME</span>
-                <span>Excel</span>
-                <span>Power BI</span>
+        <article class="card" style="margin-bottom: 24px;">
+            <h3 style="margin-bottom: 12px;">🎯 K-Means Customer Segments & Targeted Business Actions</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 15px;">
+                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">1. Champions</strong>
+                    <span style="font-size: 13px; color: var(--muted);">Recent, frequent, high-value buyers[cite: 12]. <em>Action:</em> Retain & reward with exclusive loyalty benefits[cite: 12].</span>
+                </div>
+                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">2. Loyal Customers</strong>
+                    <span style="font-size: 13px; color: var(--muted);">Strong spend and frequency[cite: 12]. <em>Action:</em> Grow value through upselling and cross-selling[cite: 12].</span>
+                </div>
+                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">3. Potential Loyalists</strong>
+                    <span style="font-size: 13px; color: var(--muted);">Moderate activity[cite: 12]. <em>Action:</em> Nurture with targeted product recommendations[cite: 12].</span>
+                </div>
+                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">4. At Risk</strong>
+                    <span style="font-size: 13px; color: var(--muted);">Declining activity[cite: 12]. <em>Action:</em> Win back via reminders and targeted incentives[cite: 12].</span>
+                </div>
+                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
+                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">5. Lost Customers</strong>
+                    <span style="font-size: 13px; color: var(--muted);">Low recent activity[cite: 12]. <em>Action:</em> Selective and cost-effective re-engagement campaigns[cite: 12].</span>
+                </div>
             </div>
-
-            <h3 style="font-size:18px;margin-top:25px">Research objectives</h3>
-
-            <ul>
-                <li>Assess customer perceptions of AI-driven segmentation.</li>
-                <li>Identify factors influencing segmentation effectiveness.</li>
-                <li>Study the relationship between segmentation and campaign performance.</li>
-                <li>Explore customer groups using RFM analysis and K-Means clustering.</li>
-                <li>Investigate how customer lifetime value can inform marketing decisions.</li>
-            </ul>
-
-            <p class="note">
-                Add your final methodology, findings, charts, and verified
-                results here when your research analysis is complete.
-            </p>
-
         </article>
 
     </div>
