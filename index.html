@@ -1,1198 +1,189 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8fafc">
-<meta name="description" content="Vidyalakshmi Raghuraman - QA Leadership, AI, Quality Engineering and Business Analytics">
-<title>Vidyalakshmi Raghuraman | QA Leadership & AI</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vidyalakshmi Raghuraman | AI Quality and Business Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root {
-    --bg: #f8fafc;
-    --surface: #ffffff;
-    --text: #0f172a;
-    --muted: #475569;
-    --line: #cbd5e1;
-    --cyan: #0284c7;
-    --purple: #7c3aed;
-    --gold: #b45309;
-    --card-bg: #ffffff;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-body {
-    font-family: Inter, "Segoe UI", Arial, sans-serif;
-    background: 
-        radial-gradient(ellipse at 15% 0%, rgba(2,132,199,.06), transparent 34rem),
-        radial-gradient(ellipse at 85% 10%, rgba(124,58,237,.06), transparent 38rem),
-        var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:focus-visible {
-    outline: 3px solid var(--cyan);
-    outline-offset: 4px;
-}
-
-.wrap {
-    width: min(1160px, calc(100% - 40px));
-    margin: auto;
-}
-
-/* NAVIGATION */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(248,250,252,.92);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--line);
-}
-
-nav {
-    min-height: 76px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 800;
-    color: #0f172a;
-}
-
-.brand-mark {
-    display: grid;
-    place-items: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 13px;
-    color: #ffffff;
-    background: linear-gradient(135deg,var(--cyan),var(--purple));
-}
-
-.brand small {
-    display: block;
-    color: var(--muted);
-    font-size: 10px;
-    letter-spacing: 1.5px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.nav-links a:hover {
-    color: var(--cyan);
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 17px;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 14px;
-    transition: .2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    border-color: var(--cyan);
-}
-
-.btn.primary {
-    color: #ffffff;
-    background: linear-gradient(120deg,var(--cyan),var(--purple));
-    border: none;
-}
-
-.btn.secondary {
-    background: rgba(0,0,0,.03);
-    color: #1e293b;
-}
-
-/* HERO */
-
-.hero {
-    padding: 90px 0 75px;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 55px;
-    align-items: center;
-}
-
-.eyebrow {
-    display: inline-block;
-    padding: 7px 13px;
-    border: 1px solid #cbd5e1;
-    border-radius: 50px;
-    color: #475569;
-    background: rgba(124,58,237,.06);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-}
-
-h1 {
-    margin: 25px 0 20px;
-    font-size: clamp(42px,6vw,78px);
-    line-height: 1.05;
-    letter-spacing: -3px;
-    color: #0f172a;
-}
-
-.gradient-text {
-    color: var(--cyan);
-    background: linear-gradient(100deg,#0f172a,#7c3aed,var(--cyan));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-copy {
-    max-width: 650px;
-    color: var(--muted);
-    font-size: 18px;
-}
-
-.hero-copy strong {
-    color: var(--text);
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 28px;
-}
-
-.availability {
-    margin-top: 25px;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.profile-card {
-    padding: 28px;
-    border: 1px solid var(--line);
-    border-radius: 26px;
-    background: #ffffff;
-    box-shadow: 0 20px 40px rgba(15,23,42,.06);
-}
-
-.avatar {
-    display: grid;
-    place-items: center;
-    width: 58px;
-    height: 58px;
-    border-radius: 17px;
-    color: #ffffff;
-    background: linear-gradient(135deg,#b45309,#d97706);
-    font-size: 21px;
-    font-weight: 900;
-}
-
-.status {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 50px;
-    color: #047857;
-    background: rgba(16,185,129,.1);
-    font-size: 11px;
-    font-weight: 600;
-}
-
-.profile-card h2 {
-    margin: 20px 0 5px;
-    font-size: 25px;
-    color: #0f172a;
-}
-
-.profile-card p {
-    color: var(--muted);
-}
-
-.stat-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 24px;
-}
-
-.stat {
-    padding: 16px;
-    border: 1px solid var(--line);
-    border-radius: 15px;
-    background: #f8fafc;
-}
-
-.stat strong {
-    display: block;
-    font-size: 27px;
-    color: #0f172a;
-}
-
-.stat span {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-/* COMMON SECTIONS */
-
-section.content-section {
-    padding: 75px 0;
-    border-top: 1px solid var(--line);
-}
-
-.section-head {
-    margin-bottom: 30px;
-}
-
-.kicker {
-    color: var(--cyan);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.section-title {
-    margin: 5px 0 12px;
-    font-size: clamp(30px,4vw,48px);
-    line-height: 1.15;
-    letter-spacing: -1.5px;
-    color: #0f172a;
-}
-
-.section-intro {
-    max-width: 680px;
-    color: var(--muted);
-}
-
-/* CARDS */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    gap: 17px;
-}
-
-.card {
-    padding: 25px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(15,23,42,.03);
-}
-
-.card-icon {
-    display: grid;
-    place-items: center;
-    width: 45px;
-    height: 45px;
-    margin-bottom: 18px;
-    border: 1px solid rgba(2,132,199,.2);
-    border-radius: 13px;
-    color: var(--cyan);
-    background: rgba(2,132,199,.06);
-    font-size: 22px;
-}
-
-.card h3 {
-    margin-bottom: 8px;
-    font-size: 18px;
-    color: #0f172a;
-}
-
-.card p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* SKILLS */
-
-.skill-groups {
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 17px;
-}
-
-.pills, .tech-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.pills span, .tech-pills span {
-    display: inline-block;
-    padding: 6px 10px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    color: #334155;
-    background: #f1f5f9;
-    font-size: 12px;
-}
-
-/* EXPERIENCE */
-
-.timeline {
-    display: grid;
-    gap: 17px;
-}
-
-.exp-row {
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    gap: 25px;
-    padding: 26px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(15,23,42,.03);
-}
-
-.exp-date {
-    color: var(--cyan);
-    font-size: 13px;
-    font-weight: 800;
-}
-
-.exp-row h3 {
-    font-size: 20px;
-    color: #0f172a;
-}
-
-.meta {
-    margin: 3px 0 13px;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.exp-row p:not(.meta) {
-    color: #334155;
-    font-size: 14px;
-}
-
-/* PROJECTS */
-
-.project-card {
-    display: grid;
-    grid-template-columns: 1.1fr .9fr;
-    gap: 25px;
-    padding: 30px;
-    border: 1px solid rgba(124,58,237,.25);
-    border-radius: 24px;
-    background: linear-gradient(130deg,rgba(124,58,237,.04),rgba(2,132,199,.03));
-    box-shadow: 0 4px 12px rgba(15,23,42,.03);
-}
-
-.project-card h3, .project-detail h3 {
-    margin: 8px 0 12px;
-    font-size: 25px;
-    line-height: 1.3;
-    color: #0f172a;
-}
-
-.project-card p, .project-detail p {
-    color: var(--muted);
-}
-
-.project-visual {
-    display: grid;
-    place-items: center;
-    min-height: 230px;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: radial-gradient(circle,rgba(124,58,237,.08),transparent 65%);
-}
-
-.orbit {
-    display: grid;
-    place-items: center;
-    width: 145px;
-    height: 145px;
-    border: 1px solid var(--cyan);
-    border-radius: 50%;
-    box-shadow: 0 0 35px rgba(2,132,199,.08);
-    font-size: 45px;
-    color: var(--gold);
-    position: relative;
-    background: #ffffff;
-}
-
-.orbit:before, .orbit:after {
-    content: "";
-    position: absolute;
-    inset: 20px -12px;
-    border: 1px solid var(--purple);
-    border-radius: 50%;
-    transform: rotate(55deg);
-}
-
-.orbit:after {
-    transform: rotate(-55deg);
-    border-color: var(--gold);
-}
-
-.project-detail {
-    padding: 28px;
-    border: 1px solid var(--line);
-    border-radius: 22px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(15,23,42,.03);
-}
-
-.project-detail ul {
-    padding-left: 22px;
-    margin: 15px 0;
-    color: #334155;
-}
-
-.project-detail li {
-    margin-bottom: 7px;
-}
-
-.project-type {
-    color: var(--cyan) !important;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-/* VIDEO */
-
-.video-showcase {
-    display: grid;
-    grid-template-columns: 1.15fr .85fr;
-    align-items: center;
-    gap: 25px;
-    padding: 25px;
-    border: 1px solid rgba(2,132,199,.2);
-    border-radius: 24px;
-    background: linear-gradient(130deg,rgba(2,132,199,.04),rgba(124,58,237,.04));
-    box-shadow: 0 4px 12px rgba(15,23,42,.03);
-}
-
-.video-frame {
-    overflow: hidden;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    background: #0f172a;
-}
-
-.video-frame video {
-    display: block;
-    width: 100%;
-    max-height: 500px;
-    background: #0f172a;
-}
-
-.video-copy h3 {
-    margin: 8px 0 12px;
-    font-size: 25px;
-    color: #0f172a;
-}
-
-.video-copy p {
-    color: var(--muted);
-    margin-bottom: 17px;
-}
-
-.note {
-    margin-top: 15px;
-    font-size: 12px;
-    color: var(--muted);
-}
-
-/* CONTACT */
-
-.contact-band {
-    padding: clamp(28px,5vw,55px);
-    border: 1px solid rgba(2,132,199,.2);
-    border-radius: 25px;
-    background: linear-gradient(115deg,#e0f2fe,#ede9fe);
-    box-shadow: 0 4px 20px rgba(15,23,42,.04);
-}
-
-.contact-band h2 {
-    max-width: 750px;
-    margin: 10px 0 15px;
-    font-size: clamp(32px,4vw,52px);
-    line-height: 1.15;
-    color: #0f172a;
-}
-
-.contact-band p {
-    max-width: 750px;
-    margin-bottom: 23px;
-    color: #334155;
-}
-
-.contact-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 11px;
-}
-
-footer {
-    padding: 25px 0;
-    color: #64748b;
-    font-size: 12px;
-}
-
-footer .wrap {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .profile-card {
-        max-width: 600px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2,minmax(0,1fr));
-    }
-
-    .project-card, .video-showcase {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 650px) {
-    .wrap {
-        width: calc(100% - 28px);
-    }
-
-    nav {
-        min-height: 68px;
-    }
-
-    .brand {
-        font-size: 13px;
-    }
-
-    .brand small {
-        font-size: 8px;
-    }
-
-    .nav-links {
-        gap: 10px;
-        font-size: 11px;
-    }
-
-    .nav-links a:nth-child(2),
-    .nav-links a:nth-child(3),
-    .nav-links a:nth-child(4) {
-        display: none;
-    }
-
-    .hero {
-        padding: 60px 0 50px;
-    }
-
-    h1 {
-        letter-spacing: -1.5px;
-    }
-
-    section.content-section {
-        padding: 52px 0;
-    }
-
-    .cards, .skill-groups {
-        grid-template-columns: 1fr;
-    }
-
-    .exp-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-        padding: 21px;
-    }
-
-    .project-card, .video-showcase {
-        padding: 19px;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { transition: none !important; }
-}
+:root{--bg:#F2F4F8;--surface:#fff;--ink:#0F1B4C;--muted:#4A5575;--line:#CBD1E2;--accent:#9A5A00;--panel:#1C2F8F;--on-panel:#F2F4FB;--amber:#F2B84A;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1030;--surface:#131A45;--ink:#EDEFFA;--muted:#A9B2D0;--line:#2A3366;--accent:#F2B84A}}
+:root[data-theme="dark"]{--bg:#0B1030;--surface:#131A45;--ink:#EDEFFA;--muted:#A9B2D0;--line:#2A3366;--accent:#F2B84A}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.08rem/1.65 "Newsreader",Georgia,serif}
+h1,h2,h3,h4,.ui{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.25rem}
+.band{background:var(--panel);color:var(--on-panel)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;font:500 .95rem "Bricolage Grotesque",sans-serif;flex-wrap:wrap;gap:.6rem}
+nav a{text-decoration:none;margin-left:1.3rem}
+nav a:hover{text-decoration:underline}
+.hero{padding:3.5rem 0 3rem}
+h1{font-size:clamp(2.4rem,6.2vw,4.6rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 1.2rem;font-weight:700;max-width:15ch}
+.lede{max-width:40rem;font-size:1.2rem;color:#D5DBF2;margin:0}
+.chain{list-style:none;margin:2.8rem 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem}
+.chain li{border:1.5px solid rgba(242,244,251,.4);border-radius:4px;padding:.8rem .9rem;font:500 .92rem/1.3 "Bricolage Grotesque",sans-serif;position:relative;animation:lit 10s infinite}
+.chain small{display:block;font:400 .8rem/1.3 "Newsreader",serif;opacity:.75;margin-top:.2rem}
+.chain li:nth-child(2){animation-delay:1.2s}.chain li:nth-child(3){animation-delay:2.4s}.chain li:nth-child(4){animation-delay:3.6s}.chain li:nth-child(5){animation-delay:4.8s}
+@keyframes lit{0%,24%,100%{background:transparent;border-color:rgba(242,244,251,.4);color:inherit}6%,16%{background:var(--amber);border-color:var(--amber);color:#0F1B4C}}
+.chain li:last-child{border-style:dashed}
+.cap{font:500 .9rem "Bricolage Grotesque",sans-serif;color:#C4CCEB;margin:.9rem 0 0}
+section{padding:4rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 .7rem;max-width:24ch}
+.sub{color:var(--muted);max-width:42rem;margin:0 0 2rem}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.tabs button{font:500 1rem "Bricolage Grotesque",sans-serif;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:4px;padding:.6rem 1rem;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pane{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.pane[hidden]{display:none}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1.4rem}
+.box h3{margin:0 0 .5rem;font-size:1.05rem}
+.box p{margin:0;color:var(--muted)}
+.big{font:700 1.5rem/1.25 "Bricolage Grotesque",sans-serif;margin:0 0 1rem;max-width:28ch}
+.case{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem}
+.case h3{font-size:1.5rem;margin:0 0 .4rem}
+dl{margin:0}
+dt{font:700 .98rem "Bricolage Grotesque",sans-serif;margin-top:1rem}
+dd{margin:.1rem 0 0;color:var(--muted)}
+.facts{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--amber);border-radius:4px;padding:1.4rem}
+.facts div{padding:.7rem 0;border-bottom:1px solid var(--line)}
+.facts div:last-child{border:0}
+.facts b{display:block;font:700 1.15rem "Bricolage Grotesque",sans-serif}
+.facts span{color:var(--muted);font-size:.98rem}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.proj h3{font-size:1.2rem;margin:0 0 .3rem}
+.proj .k{font:500 .9rem "Bricolage Grotesque",sans-serif;color:var(--accent);margin:0 0 .6rem}
+.proj p{margin:.4rem 0}
+.link{font:700 .98rem "Bricolage Grotesque",sans-serif}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem}
+.cols3 h3{font-size:1.1rem;margin:0 0 .3rem}
+.cols3 p{margin:0;color:var(--muted)}
+.btn{display:inline-block;font:700 1rem "Bricolage Grotesque",sans-serif;padding:.85rem 1.4rem;border-radius:4px;text-decoration:none;border:2px solid currentColor;margin:.4rem .6rem 0 0}
+.btn.fill{background:var(--amber);border-color:var(--amber);color:#0F1B4C}
+footer{padding:2rem 0 3rem;color:var(--muted);font:.9rem "Bricolage Grotesque",sans-serif}
+@media(max-width:820px){.chain{grid-template-columns:1fr}.pane,.case,.proj,.cols3{grid-template-columns:1fr}nav a{margin-left:0;margin-right:1rem}}
+@media(prefers-reduced-motion:reduce){.chain li{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
-
 <body>
-
-<header>
-    <nav class="wrap" aria-label="Main navigation">
-        <a class="brand" href="#home">
-            <span class="brand-mark">VR</span>
-            <span>
-                Vidyalakshmi Raghuraman
-                <small>QUALITY · AI · TRANSFORMATION</small>
-            </span>
-        </a>
-
-        <div class="nav-links">
-            <a href="#expertise">Expertise</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#dissertation">Dissertation</a>
-            <a class="btn secondary" href="#contact">Let's Connect ↗</a>
-        </div>
-    </nav>
+<div class="band">
+<div class="wrap">
+<nav><strong>Vidyalakshmi Raghuraman</strong><div><a href="#strategy">Strategy</a><a href="#case">Case study</a><a href="#analytics">Analytics</a><a href="#record">Track record</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+<h1>AI is only as good as its audit trail.</h1>
+<p class="lede">I’m a business analyst and QA lead with 11+ years in banking, telecom, ERP and public safety, plus an Executive MBA in Business Analytics. I design GenAI systems where the math is deterministic, the model is constrained, and every answer can be tested.</p>
+<ol class="chain" aria-label="Level 4 AI pipeline">
+<li>Math engine<small>Swiss Ephemeris, no LLM maths</small></li>
+<li>Researcher<small>Classical slokas by lookup</small></li>
+<li>Fact Pack<small>Verified data handoff</small></li>
+<li>Interpreter<small>Gemini narrates, never calculates</small></li>
+<li>Critic<small>Zero-token checks, max 2 retries</small></li>
+</ol>
+<p class="cap">The pipeline behind my flagship project, Vidhu Astro Prediction.</p>
 </header>
+</div>
+</div>
 
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-    <div class="wrap hero-grid">
-
-        <div>
-            <span class="eyebrow">QA LEADERSHIP · AI QUALITY · ANALYTICS</span>
-
-            <h1>
-                Building confidence in every
-                <span class="gradient-text">digital release.</span>
-            </h1>
-
-            <p class="hero-copy">
-                I'm <strong>Vidyalakshmi Raghuraman</strong> — a quality
-                assurance professional with 11+ years of experience in
-                enterprise testing, release quality, and cross-functional
-                delivery. I combine hands-on QA leadership with business
-                analytics and a growing focus on AI-enabled products.
-            </p>
-
-            <div class="hero-actions">
-                <a class="btn primary" href="#experience">Explore My Experience ↓</a>
-                <a class="btn secondary"
-                   href="https://github.com/vidyalakshmi-raghuraman"
-                   target="_blank" rel="noopener noreferrer">
-                   View GitHub ↗
-                </a>
-            </div>
-
-            <p class="availability">
-                ● Open to QA Lead, Test Lead and Quality Engineering opportunities
-            </p>
-        </div>
-
-        <aside class="profile-card">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-                <div class="avatar">VR</div>
-                <span class="status">Professional Portfolio</span>
-            </div>
-
-            <h2>Quality with a wider lens.</h2>
-            <p>Reliable testing. Clear communication. Data-informed decisions.</p>
-
-            <div class="stat-grid">
-                <div class="stat">
-                    <strong>11+</strong>
-                    <span>Years in QA & Testing</span>
-                </div>
-                <div class="stat">
-                    <strong>5+</strong>
-                    <span>Business Domains</span>
-                </div>
-                <div class="stat">
-                    <strong>API</strong>
-                    <span>Functional & Integration Testing</span>
-                </div>
-                <div class="stat">
-                    <strong>AI</strong>
-                    <span>Emerging Product Focus</span>
-                </div>
-            </div>
-        </aside>
-
-    </div>
+<main class="wrap">
+<section id="strategy">
+<h2>My strategy for trustworthy enterprise AI</h2>
+<p class="sub">Four layers I apply to any system where a language model sits near money, customers or decisions. Pick a layer to see how I built it and where it applies in a business.</p>
+<div class="tabs" role="tablist" aria-label="Trust layers">
+<button role="tab" id="t0" aria-selected="true" aria-controls="p0">Ground truth</button>
+<button role="tab" id="t1" aria-selected="false" aria-controls="p1">Orchestration</button>
+<button role="tab" id="t2" aria-selected="false" aria-controls="p2">Guardrails</button>
+<button role="tab" id="t3" aria-selected="false" aria-controls="p3">Human QA</button>
+</div>
+<div class="pane" id="p0" role="tabpanel" aria-labelledby="t0">
+<div class="box"><h3>How I built it</h3><p class="big">Facts come from code, never from the model.</p><p>Planetary positions are calculated with the Swiss Ephemeris and legacy interpretation rules are encoded in Python. Gemini only receives results that have already been computed.</p></div>
+<div class="box"><h3>Where it applies</h3><p class="big">Systems of record decide, AI explains.</p><p>Balances, eligibility, pricing and claims values should come from the governed system, with the model summarising them for people.</p></div>
+</div>
+<div class="pane" id="p1" role="tabpanel" aria-labelledby="t1" hidden>
+<div class="box"><h3>How I built it</h3><p class="big">One controlled handoff between engine and model.</p><p>The Interpreter only ever sees a structured Fact Pack of verified results. The orchestrator also discovers live Gemini models, ranks them, and fails over with exponential jitter backoff on 404 and 429 errors.</p></div>
+<div class="box"><h3>Where it applies</h3><p class="big">An AI gateway, not a free-for-all.</p><p>Routing, fallbacks and caching sit in one place, so cost, resilience and data flow can be reviewed and changed without touching every feature.</p></div>
+</div>
+<div class="pane" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+<div class="box"><h3>How I built it</h3><p class="big">Prompt rules that limit what the model may say.</p><p>A zero-token Critic checks the model’s output for invented dates and Dasa periods, and failures trigger a revision capped at two retries. “Natal First” rules and cancellation logic such as Kemadruma prevent false positives.</p></div>
+<div class="box"><h3>Where it applies</h3><p class="big">Policy as part of the design.</p><p>Tone, scope and escalation rules belong in the specification and the prompt, then get tested like any other business rule.</p></div>
+</div>
+<div class="pane" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+<div class="box"><h3>How I built it</h3><p class="big">Prove it, then keep proving it.</p><p>I audited the Python rules and corrected critical calculation defects, ran functional and regression tests, verified the English and Tamil workflows, and simulated HTTP 404, 429 and 503 failures.</p></div>
+<div class="box"><h3>Where it applies</h3><p class="big">Evidence a risk team can sign.</p><p>Traceable test cases, failure-mode results and regression suites turn “the AI seems fine” into a release decision.</p></div>
+</div>
 </section>
 
-<!-- EXPERTISE -->
-
-<section class="content-section" id="expertise">
-    <div class="wrap">
-
-        <div class="section-head">
-            <p class="kicker">WHAT I BRING</p>
-            <h2 class="section-title">Quality is a team capability.</h2>
-            <p class="section-intro">
-                I focus on making delivery more predictable through thoughtful
-                test strategy, clear defect communication, and quality practices
-                that support business outcomes.
-            </p>
-        </div>
-
-        <div class="cards">
-            <article class="card">
-                <div class="card-icon">◎</div>
-                <h3>QA Strategy & Leadership</h3>
-                <p>
-                    Test planning, estimation, test design and execution,
-                    defect triage, stakeholder reporting, mentoring, and
-                    release readiness.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon">⌘</div>
-                <h3>End-to-End Testing</h3>
-                <p>
-                    Functional, regression, system, integration, UAT, web,
-                    desktop, mobile, and API testing across enterprise workflows.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon">✳</div>
-                <h3>AI & Digital Transformation</h3>
-                <p>
-                    Exploring AI-enabled workflows, GenAI quality considerations,
-                    analytics, and practical ways to make digital change
-                    more dependable.
-                </p>
-            </article>
-        </div>
-
-    </div>
+<section id="case">
+<div class="case">
+<div>
+<h2>Case study: Vidhu Astro Prediction</h2>
+<p class="sub" style="margin-bottom:0">An AI-assisted Vedic astrology web application, built with Python, Flask and Google Gemini.</p>
+<dl>
+<dt>The business problem</dt><dd>Traditional astrology reports are static and open to ambiguous interpretation, and a language model on its own invents planetary degrees, date spans and Dasa calculations.</dd>
+<dt>The transformation</dt><dd>Legacy rules became code in a two-layer system. pyswisseph supplies exact degrees, house cusps and Vimshottari Dasa timelines, and a Researcher, Interpreter and Critic pipeline turns them into a grounded narrative in English or Tamil.</dd>
+<dt>My role</dt><dd>Requirements, workflow design, REST API and Gemini integration, debugging, error handling, and functional and regression testing.</dd>
+<dt>Stack</dt><dd>Python 3.13, Flask, SQLite in WAL mode, pyswisseph, Google GenAI SDK, n8n automation, Jinja2 and print-ready CSS.</dd>
+</dl>
+<a class="btn" href="https://github.com/vidhusjack999-cmyk/vidhu-astro-prediction">View the repository</a>
+<a class="btn" href="#demo">Watch the demo</a>
+<video id="demo" controls preload="metadata" playsinline aria-label="Vidhu Astro Prediction demo video" style="width:100%;margin-top:1.4rem;border-radius:4px;border:1px solid var(--line);background:#0F1B4C" src="/_blob/21269c44b94fc49eb4ff0c57ecf1f736"></video>
+<p class="sub" style="margin:.5rem 0 0;font-size:.95rem">The first 10 seconds are an AI-generated concept animation; the rest uses screenshots of the working app.</p>
+</div>
+<div class="facts">
+<div><b>Level 4 hybrid architecture</b><span>Classical engine plus LLM, with a strict handoff between them</span></div>
+<div><b>Zero-token Critic</b><span>Python checks catch invented dates and Dasa periods, with up to 2 retries</span></div>
+<div><b>Resilient by design</b><span>Live model discovery, jitter backoff on 404 and 429, SQLite WAL quota tracking</span></div>
+<div><b>English and Tamil</b><span>Bilingual interface with location lookup and print-ready reports</span></div>
+<div><b>PDF in, grounded answer out</b><span>Uploaded horoscopes combined with structured prompts</span></div>
+</div>
+</div>
 </section>
 
-<!-- SKILLS -->
-
-<section class="content-section" id="skills">
-    <div class="wrap">
-
-        <div class="section-head">
-            <p class="kicker">MY TOOLKIT</p>
-            <h2 class="section-title">Skills & Technologies.</h2>
-            <p class="section-intro">
-                A blend of quality engineering fundamentals, collaboration
-                tools, and business analytics capabilities.
-            </p>
-        </div>
-
-        <div class="skill-groups">
-
-            <article class="card">
-                <h3>Testing & Quality</h3>
-                <div class="pills">
-                    <span>Manual Testing</span>
-                    <span>Functional Testing</span>
-                    <span>Regression Testing</span>
-                    <span>System Testing</span>
-                    <span>Integration Testing</span>
-                    <span>UAT</span>
-                    <span>API Testing</span>
-                    <span>Mobile & Web QA</span>
-                    <span>Firmware Validation</span>
-                </div>
-            </article>
-
-            <article class="card">
-                <h3>Tools & Delivery</h3>
-                <div class="pills">
-                    <span>Postman</span>
-                    <span>Swagger API</span>
-                    <span>JIRA</span>
-                    <span>HP ALM</span>
-                    <span>Azure DevOps</span>
-                    <span>TFS / VSTS</span>
-                    <span>SQL Server</span>
-                    <span>Agile Scrum</span>
-                    <span>Kanban</span>
-                </div>
-            </article>
-
-            <article class="card">
-                <h3>Analytics & Business</h3>
-                <div class="pills">
-                    <span>Excel</span>
-                    <span>Power BI</span>
-                    <span>Requirements Analysis</span>
-                    <span>Stakeholder Management</span>
-                    <span>RFM Analysis</span>
-                    <span>Customer Segmentation</span>
-                    <span>Digital Transformation</span>
-                </div>
-            </article>
-
-            <article class="card">
-                <h3>Domain Experience</h3>
-                <div class="pills">
-                    <span>Banking & Finance</span>
-                    <span>Telecom Billing</span>
-                    <span>ERP</span>
-                    <span>R&D</span>
-                    <span>Public Safety</span>
-                    <span>Printers & Scanners</span>
-                </div>
-            </article>
-
-        </div>
-    </div>
+<section id="analytics">
+<h2>Analytics that turn data into decisions</h2>
+<p class="sub">Two projects from my Executive MBA in Business Analytics and Digital Transformation at PES University, both built in KNIME.</p>
+<div class="proj">
+<article class="box"><h3>AI-driven customer segmentation for B2C online retail</h3><p class="k">Individual dissertation</p>
+<p>RFM, customer lifetime value and K-Means clustering on the UCI Online Retail II data produced five segments, from Champions to Lost Customers, each with a recommended marketing action.</p>
+<p>A 55-response survey showed recommendation accuracy and offer usefulness significantly predict engagement and purchase intention. A Tableau dashboard ties it together.</p>
+<a class="link" href="https://github.com/vidhusjack999-cmyk/mba-customer-segmentation">Code and report</a></article>
+<article class="box"><h3>Optimizing campaign timing with real-time analytics</h3><p class="k">Team project, six members</p>
+<p>EDA, ANOVA and regression on about 200,000 campaign records from five companies. The ROI model reached R² 0.89, with acquisition cost and profit as the strongest drivers.</p>
+<p>Time pattern and frequency came close to statistical significance, and the morning slot carried about half of total profit.</p>
+<a class="link" href="https://github.com/vidhusjack999-cmyk/mba-campaign-timing">Code and report</a></article>
+</div>
 </section>
 
-<!-- EXPERIENCE -->
-
-<section class="content-section" id="experience">
-    <div class="wrap">
-
-        <div class="section-head">
-            <p class="kicker">CAREER JOURNEY</p>
-            <h2 class="section-title">Experience built on delivery.</h2>
-            <p class="section-intro">
-                Experience across enterprise environments, collaborating
-                with delivery teams to validate complex systems and
-                support dependable releases.
-            </p>
-        </div>
-
-        <div class="timeline">
-
-            <article class="exp-row">
-                <div class="exp-date">Most Recent Experience</div>
-
-                <div>
-                    <h3>QA / Test Lead Responsibilities</h3>
-                    <p class="meta">Enterprise QA · Manual Testing · Agile Delivery</p>
-
-                    <p>
-                        Led and coordinated test activities across functional
-                        and integration workstreams, including test planning,
-                        test case reviews, execution tracking, defect management,
-                        UAT support, and status reporting. Partnered with
-                        developers, business teams, and stakeholders to resolve
-                        issues and support release quality.
-                    </p>
-
-                    <div class="tech-pills">
-                        <span>Test Planning</span>
-                        <span>Defect Management</span>
-                        <span>ADO / JIRA</span>
-                        <span>Agile</span>
-                        <span>Stakeholder Coordination</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="exp-row">
-                <div class="exp-date">2013 – 2015</div>
-
-                <div>
-                    <h3>Associate</h3>
-                    <p class="meta">HCL Technologies</p>
-
-                    <p>
-                        Executed extensive compatibility and functional testing
-                        for Xerox printer and scanner software across Windows,
-                        Linux, and macOS platforms, covering complex network
-                        protocols, drivers, and firmware upgrades.
-                    </p>
-
-                    <div class="tech-pills">
-                        <span>Cross-platform Testing</span>
-                        <span>Firmware QA</span>
-                        <span>Network Protocols</span>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-        <p class="note">
-            Verify all employer names, job titles, and dates against your
-            final resume before publishing.
-        </p>
-
-    </div>
+<section id="record">
+<h2>The delivery record behind the strategy</h2>
+<p class="sub">Eleven years of getting enterprise systems to production, working with business analysts, product owners and developers.</p>
+<div class="cols3">
+<div><h3>Business analysis</h3><p>Requirement clarification, backlog and acceptance-criteria review, traceability, UAT support and client showcases.</p></div>
+<div><h3>Quality assurance</h3><p>Sole QA lead on the Integra financial system at Capita. Earlier work for Citi Bank, FairPoint Communications, APRA AMCOS and Greater Manchester Police.</p></div>
+<div><h3>Technical toolkit</h3><p>Azure DevOps, JIRA, HP ALM, Postman, Swagger, SQL, KNIME, Tableau, Power BI and Excel.</p></div>
+</div>
 </section>
 
-<!-- ASTROLOGY PROJECT -->
-
-<section class="content-section" id="projects">
-    <div class="wrap">
-
-        <div class="section-head">
-            <p class="kicker">FEATURED PROJECT</p>
-            <h2 class="section-title">Where quality meets curiosity.</h2>
-            <p class="section-intro">
-                Exploring technology, AI, and user-focused digital experiences
-                through hands-on application development.
-            </p>
-        </div>
-
-        <article class="project-card">
-
-            <div>
-                <p class="kicker">AI APPLICATION</p>
-
-                <h3>Vidhu Astro Prediction</h3>
-
-                <p>
-                    A personal application exploring traditional Tamil
-                    astrology workflows alongside AI-generated interpretations.
-                    The project combines a Python and Flask application,
-                    astronomical calculations, and generative AI integration.
-                </p>
-
-                <div class="pills">
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Swiss Ephemeris</span>
-                    <span>Gemini AI</span>
-                    <span>Web Application</span>
-                </div>
-
-                <div class="hero-actions">
-                    <a class="btn primary"
-                       href="https://github.com/vidhusjack999-cmyk/vidhu-astro-prediction"
-                       target="_blank" rel="noopener noreferrer">
-                       Explore Source Code ↗
-                    </a>
-
-                    <a class="btn secondary"
-                       href="https://github.com/vidhusjack999-cmyk/vidhu-astro-prediction/blob/main/README.md"
-                       target="_blank" rel="noopener noreferrer">
-                       Read README ↗
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-visual" aria-label="Astrology and AI illustration">
-                <div class="orbit">✧</div>
-            </div>
-
-        </article>
-
-    </div>
+<section id="contact" style="border:0">
+<div class="band" style="padding:2.5rem;border-radius:4px">
+<h2 style="max-width:none">Looking for a Business Analysis or QA role where AI quality matters?</h2>
+<p style="color:#D5DBF2;max-width:40rem;margin:0 0 1rem">All my code, reports and project write-ups are on GitHub, each opening with an executive summary.</p>
+<a class="btn fill" href="https://github.com/vidhusjack999-cmyk">Open my GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/vidyalakshmi-raghuraman-66493b59">LinkedIn</a>
+<a class="btn" href="mailto:vidhusjack999@gmail.com">Email me</a>
+</div>
 </section>
-
-<!-- EXECUTIVE MBA DISSERTATION PRESENTATION -->
-
-<section class="content-section" id="dissertation">
-    <div class="wrap">
-
-        <div class="section-head">
-            <p class="kicker">EXECUTIVE MBA · FINAL PRESENTATION</p>
-            <h2 class="section-title">AI-Driven Customer Segmentation & Marketing Effectiveness</h2>
-            <p class="section-intro">
-                Dissertation presentation submitted to PES University under the guidance of Akram Ali. Integrates secondary transactional data with primary survey perceptions.
-            </p>
-        </div>
-
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
-            <article class="card">
-                <h3>📊 Research Objectives & Methodology</h3>
-                <ul style="padding-left: 20px; margin-top: 10px; color: var(--muted); font-size: 14px;">
-                    <li style="margin-bottom: 8px;"><strong>Dual Approach:</strong> Combines primary survey responses (55 online shoppers via Google Forms) with secondary transactional behavior (UCI Online Retail II dataset).</li>
-                    <li style="margin-bottom: 8px;"><strong>Tools Used:</strong> KNIME Analytics Platform (data modeling/segmentation), Excel (data cleaning), and Tableau (dashboards).</li>
-                    <li style="margin-bottom: 8px;"><strong>Core Metrics:</strong> RFM Analysis (Recency, Frequency, Monetary), Customer Lifetime Value (CLV), and K-Means clustering[cite: 12].</li>
-                </ul>
-            </article>
-
-            <article class="card">
-                <h3>📈 Regression Analysis & Hypothesis Testing</h3>
-                <ul style="padding-left: 20px; margin-top: 10px; color: var(--muted); font-size: 14px;">
-                    <li style="margin-bottom: 8px;"><strong>H1 & H2 Supported (p < 0.05):</strong> AI-driven segmentation and personalized marketing positively influence customer engagement ($R^2 = 0.5861$) and purchase intention ($R^2 = 0.3943$)[cite: 12].</li>
-                    <li style="margin-bottom: 8px;"><strong>Key Drivers:</strong> Recommendation accuracy ($\beta = 0.5271$) and usefulness of personalized offers ($\beta = 0.3039$) are significant positive predictors[cite: 12].</li>
-                    <li style="margin-bottom: 8px;"><strong>Reliability:</strong> High internal consistency confirmed with a Cronbach’s alpha of 0.949[cite: 12].</li>
-                </ul>
-            </article>
-        </div>
-
-        <article class="card" style="margin-bottom: 24px;">
-            <h3 style="margin-bottom: 12px;">🎯 K-Means Customer Segments & Targeted Business Actions</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 15px;">
-                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">1. Champions</strong>
-                    <span style="font-size: 13px; color: var(--muted);">Recent, frequent, high-value buyers[cite: 12]. <em>Action:</em> Retain & reward with exclusive loyalty benefits[cite: 12].</span>
-                </div>
-                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">2. Loyal Customers</strong>
-                    <span style="font-size: 13px; color: var(--muted);">Strong spend and frequency[cite: 12]. <em>Action:</em> Grow value through upselling and cross-selling[cite: 12].</span>
-                </div>
-                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">3. Potential Loyalists</strong>
-                    <span style="font-size: 13px; color: var(--muted);">Moderate activity[cite: 12]. <em>Action:</em> Nurture with targeted product recommendations[cite: 12].</span>
-                </div>
-                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">4. At Risk</strong>
-                    <span style="font-size: 13px; color: var(--muted);">Declining activity[cite: 12]. <em>Action:</em> Win back via reminders and targeted incentives[cite: 12].</span>
-                </div>
-                <div style="background: var(--bg); padding: 15px; border-radius: 12px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display: block; margin-bottom: 4px;">5. Lost Customers</strong>
-                    <span style="font-size: 13px; color: var(--muted);">Low recent activity[cite: 12]. <em>Action:</em> Selective and cost-effective re-engagement campaigns[cite: 12].</span>
-                </div>
-            </div>
-        </article>
-
-    </div>
-</section>
-
-<!-- ASTROLOGY VIDEO -->
-
-<section class="content-section" id="video">
-    <div class="wrap">
-
-        <div class="section-head">
-            <p class="kicker">PRODUCT WALKTHROUGH</p>
-            <h2 class="section-title">See the architecture in action.</h2>
-            <p class="section-intro">
-                Watch the narrated walkthrough of Vidhu Astro Prediction,
-                showcasing the application architecture and its layers.
-            </p>
-        </div>
-
-        <div class="video-showcase">
-
-            <div class="video-frame">
-                <video controls preload="metadata" playsinline
-                       aria-label="Vidhu Astro Prediction architecture walkthrough">
-                    <source src="vidhu_astro_narrated.mp4" type="video/mp4">
-                    Your browser does not support embedded video.
-                    <a href="vidhu_astro_narrated.mp4">Open the video</a>.
-                </video>
-            </div>
-
-            <div class="video-copy">
-                <p class="kicker">FEATURED DEMO</p>
-
-                <h3>Vidhu Astro Prediction — Architecture Walkthrough</h3>
-
-                <p>
-                    This video introduces the application structure and
-                    explains the different layers behind the astrology
-                    prediction experience.
-                </p>
-
-                <div class="pills">
-                    <span>Architecture</span>
-                    <span>Flask</span>
-                    <span>Astrology Engine</span>
-                    <span>AI Integration</span>
-                </div>
-
-                <div class="hero-actions">
-                    <a class="btn primary"
-                       href="vidhu_astro_narrated.mp4"
-                       target="_blank" rel="noopener noreferrer">
-                       Open Video ↗
-                    </a>
-                </div>
-
-                <p class="note">
-                    Keep the MP4 file in the same folder as index.html.
-                    When publishing, upload both files to the same
-                    website directory.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="content-section" id="contact">
-    <div class="wrap">
-
-        <div class="contact-band">
-            <p class="kicker">LET'S CONNECT</p>
-
-            <h2>Looking for QA leadership where AI and accuracy matter?</h2>
-
-            <p>
-                My experience in enterprise testing, cross-functional delivery,
-                and business analytics helps me approach quality as a product
-                and business priority. I'm interested in opportunities where
-                teams value reliability, learning, and continuous improvement.
-            </p>
-
-            <div class="contact-actions">
-                <a class="btn primary"
-                   href="https://github.com/vidyalakshmi-raghuraman"
-                   target="_blank" rel="noopener noreferrer">
-                   Open My GitHub ↗
-                </a>
-
-                <a class="btn secondary"
-                   href="https://www.linkedin.com/in/vidyalakshmi-raghuraman-66493b59"
-                   target="_blank" rel="noopener noreferrer">
-                   Connect on LinkedIn ↗
-                </a>
-
-                <a class="btn secondary"
-                   href="mailto:vidhusjack999@gmail.com">
-                   vidhusjack999@gmail.com
-                </a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
 </main>
-
-<footer>
-    <div class="wrap">
-        <span>© 2026 Vidyalakshmi Raghuraman</span>
-        <span>Quality · AI · Business Analytics · Digital Transformation</span>
-    </div>
-</footer>
-
+<footer><div class="wrap">&copy; 2026 Vidyalakshmi Raghuraman</div></footer>
+<script>
+(function(){var t=document.querySelectorAll('[role=tab]');
+t.forEach(function(b,i){b.addEventListener('click',function(){
+t.forEach(function(x,j){var on=i===j;x.setAttribute('aria-selected',on);document.getElementById('p'+j).hidden=!on;});});
+b.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:null;
+if(n!==null){var k=t[(n+t.length)%t.length];k.focus();k.click();}});});})();
+</script>
 </body>
 </html>
