@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vidyalakshmi Raghuraman | Senior QA Consultant & Business Analytics Expert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0B1021;
+    --surface: #131B38;
+    --surface-hover: #1A254F;
+    --ink: #F0F4F8;
+    --muted: #94A3B8;
+    --line: #22305E;
+    --accent: #F2B84A;
+    --accent-emerald: #10B981;
+    --panel: #0E1636;
+    --on-panel: #F8FAFC;
+    --amber: #F2B84A;
+}
+html{scroll-padding-top:20px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.7 "Newsreader",Georgia,serif}
+h1,h2,h3,h4,.ui{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+
+.band{background:var(--panel);color:var(--on-panel);border-bottom:1px solid var(--line)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0;font:500 0.95rem "Bricolage Grotesque",sans-serif;flex-wrap:wrap;gap:1rem}
+nav strong{font-size:1.1rem;letter-spacing:-0.01em;color:var(--amber)}
+nav div{display:flex;gap:1.5rem}
+nav a{text-decoration:none;color:var(--muted);transition:color 0.2s}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:4rem 0 3.5rem}
+h1{font-size:clamp(2.5rem, 5.5vw, 4.2rem);line-height:1.08;letter-spacing:-0.03em;margin:0 0 1.2rem;font-weight:700;max-width:18ch}
+.lede{max-width:44rem;font-size:1.2rem;color:var(--muted);margin:0}
+
+.chain{list-style:none;margin:2.8rem 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0.8rem}
+.chain li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1rem;font:500 0.9rem/1.3 "Bricolage Grotesque",sans-serif;position:relative}
+.chain small{display:block;font:400 0.8rem/1.3 "Newsreader",serif;color:var(--muted);margin-top:0.3rem}
+.cap{font:500 0.9rem "Bricolage Grotesque",sans-serif;color:var(--amber);margin:1rem 0 0}
+
+section{padding:4.5rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.8rem, 3.5vw, 2.3rem);line-height:1.2;letter-spacing:-0.02em;margin:0 0 0.8rem;color:var(--ink)}
+.sub{color:var(--muted);max-width:45rem;margin:0 0 2.5rem;font-size:1.1rem}
+
+.tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.tabs button{font:500 1rem "Bricolage Grotesque",sans-serif;background:var(--surface);color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0.7rem 1.2rem;cursor:pointer;transition:all 0.2s}
+.tabs button:hover{color:var(--ink);background:var(--surface-hover)}
+.tabs button[aria-selected="true"]{background:var(--amber);color:#0B1021;border-color:var(--amber);font-weight:700}
+
+.pane{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.pane[hidden]{display:none}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.8rem;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+.box h3{margin:0 0 0.6rem;font-size:1.2rem;color:var(--amber)}
+.box p{margin:0;color:var(--muted)}
+.big{font:700 1.4rem/1.3 "Bricolage Grotesque",sans-serif;margin:0 0 0.8rem;color:var(--ink)}
+
+.case{display:grid;grid-template-columns:1.2fr 0.8fr;gap:3rem;align-items:start}
+.case h3{font-size:1.6rem;margin:0 0 0.5rem;color:var(--amber)}
+dl{margin:0}
+dt{font:700 1.02rem "Bricolage Grotesque",sans-serif;margin-top:1.2rem;color:var(--ink)}
+dd{margin:0.2rem 0 0;color:var(--muted)}
+
+.facts{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;padding:1.6rem}
+.facts div{padding:0.8rem 0;border-bottom:1px solid var(--line)}
+.facts div:last-child{border:0}
+.facts b{display:block;font:700 1.1rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.facts span{color:var(--muted);font-size:0.95rem}
+
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.proj h3{font-size:1.3rem;margin:0 0 0.4rem;color:var(--amber)}
+.proj .k{font:500 0.85rem "Bricolage Grotesque",sans-serif;color:var(--accent-emerald);text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.8rem}
+.proj p{margin:0.5rem 0;color:var(--muted)}
+
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.exp-row{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.8rem;margin-bottom:1.5rem}
+.exp-row h3{font-size:1.3rem;margin:0 0 0.3rem;color:var(--ink)}
+.exp-row .meta{font:500 0.9rem "Bricolage Grotesque",sans-serif;color:var(--amber);margin-bottom:0.8rem}
+.exp-row p{margin:0 0 1rem;color:var(--muted)}
+
+.tech-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+.tech-pills span{background:rgba(242,184,74,0.1);color:var(--amber);border:1px solid rgba(242,184,74,0.3);font:500 0.8rem "Bricolage Grotesque",sans-serif;padding:0.2rem 0.7rem;border-radius:4px}
+
+.btn{display:inline-block;font:700 0.95rem "Bricolage Grotesque",sans-serif;padding:0.8rem 1.4rem;border-radius:6px;text-decoration:none;border:2px solid var(--line);margin:0.5rem 0.6rem 0 0;transition:all 0.2s}
+.btn.fill{background:var(--amber);border-color:var(--amber);color:#0B1021}
+.btn.fill:hover{background:#ffd768}
+.btn:not(.fill):hover{border-color:var(--amber);color:var(--amber)}
+
+footer{padding:2.5rem 0;color:var(--muted);font:0.9rem "Bricolage Grotesque",sans-serif;text-align:center}
+
+@media(max-width:850px){.chain{grid-template-columns:1fr}.pane,.case,.proj-grid,.cols3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="band">
+<div class="wrap">
+<nav>
+  <strong>Vidyalakshmi Raghuraman</strong>
+  <div>
+    <a href="#strategy">Strategy</a>
+    <a href="#case">AI Architecture</a>
+    <a href="#analytics">MBA Analytics</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+<h1>AI is only as good as its audit trail.</h1>
+<p class="lede">Senior QA Consultant with 11+ years across banking, telecom, ERP, and public safety (Capita, Accenture, HCL), combined with an Executive MBA in Business Analytics & Digital Transformation. I build and test GenAI systems where the math is deterministic, models are constrained, and compliance is mathematically verifiable.</p>
+
+<ol class="chain" aria-label="Level 4 AI pipeline">
+<li>Domain Rules<small>Requirements codified</small></li>
+<li>Python Engine<small>Swiss Ephemeris math</small></li>
+<li>Orchestrator<small>Controlled handoff</small></li>
+<li>Gemini<small>Explains, never calculates</small></li>
+<li>QA Gate<small>Audit & Sign-off</small></li>
+</ol>
+<p class="cap">⚡ The production architecture behind my flagship project: Vidhu Astro Prediction.</p>
+</header>
+</div>
+</div>
+
+<main class="wrap">
+
+<section id="strategy">
+<h2>My strategy for trustworthy enterprise AI</h2>
+<p class="sub">Four core layers I apply whenever language models sit near critical data, financial decisions, or customer workflows.</p>
+
+<div class="tabs" role="tablist" aria-label="Trust layers">
+<button role="tab" id="t0" aria-selected="true" aria-controls="p0">1. Ground Truth</button>
+<button role="tab" id="t1" aria-selected="false" aria-controls="p1">2. Orchestration</button>
+<button role="tab" id="t2" aria-selected="false" aria-controls="p2">3. Guardrails</button>
+<button role="tab" id="t3" aria-selected="false" aria-controls="p3">4. Human QA</button>
+</div>
+
+<div class="pane" id="p0" role="tabpanel" aria-labelledby="t0">
+<div class="box">
+<h3>How I built it</h3>
+<p class="big">Facts come from code, never from the model.</p>
+<p>Planetary positions are calculated via Swiss Ephemeris C-bindings (`pyswisseph`) and classical rules are strictly encoded in Python. Gemini only receives results that have already been computed.</p>
+</div>
+<div class="box">
+<h3>Where it applies</h3>
+<p class="big">Systems of record decide, AI summarizes.</p>
+<p>Balances, eligibility criteria, pricing calculations, and policy compliance values should come from governed backend systems, with the model acting purely as an interface.</p>
+</div>
+</div>
+
+<div class="pane" id="p1" role="tabpanel" aria-labelledby="t1" hidden>
+<div class="box">
+<h3>How I built it</h3>
+<p class="big">One controlled handoff between engine and model.</p>
+<p>The custom orchestrator merges verified mathematical results with text extracted from uploaded PDFs, featuring dynamic model discovery and exponential backoff retry loops.</p>
+</div>
+<div class="box">
+<h3>Where it applies</h3>
+<p class="big">An AI gateway, not a free-for-all.</p>
+<p>Centralized routing, rate-limit management, and caching sit in a single modular layer so data governance and cost controls can be audited easily.</p>
+</div>
+</div>
+
+<div class="pane" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+<div class="box">
+<h3>How I built it</h3>
+<p class="big">Prompt boundaries that restrict model autonomy.</p>
+<p>“Natal First” guardrails keep predictions securely anchored to the generated birth chart, while complex edge cases like cancellation rules are handled directly in code.</p>
+</div>
+<div class="box">
+<h3>Where it applies</h3>
+<p class="big">Policy as a structural feature.</p>
+<p>Tone guidelines, security boundaries, and escalation protocols belong in prompt guardrails and functional design specs, tested like standard business rules.</p>
+</div>
+</div>
+
+<div class="pane" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+<div class="box">
+<h3>How I built it</h3>
+<p class="big">Automated zero-token validation passes.</p>
+<p>A Python-based Critic layer scans LLM outputs before rendering, rejecting unverified dates or broken calculations and enforcing bounded correction loops.</p>
+</div>
+<div class="box">
+<h3>Where it applies</h3>
+<p class="big">Evidence risk teams can sign off on.</p>
+<p>Traceable test cases, failure-mode analysis, and systematic verification turn AI prototyping into validated, production-ready release decisions.</p>
+</div>
+</div>
+</section>
+
+<section id="case">
+<div class="case">
+<div>
+<h2>Flagship Project: Vidhu Astro Prediction</h2>
+<p class="sub" style="margin-bottom:1.5rem">A Level 4 Agentic AI web platform combining deterministic Swiss Ephemeris math with Google Gemini orchestration and zero-token QA controls.</p>
+<dl>
+<dt>The Business Challenge</dt>
+<dd>Traditional astrology tools are rigid, while open-ended generative AI hallucinates critical astrological degrees, dates, and Dasa calculations.</dd>
+<dt>The Digital Transformation</dt>
+<dd>Mathematical calculations were decoupled from the LLM. The Swiss Ephemeris handles exact calculations, an Orchestrator manages structured data handoffs, and Gemini provides natural language interpretation in English or Tamil.</dd>
+<dt>My Contributions</dt>
+<dd>End-to-end system architecture, Flask backend development, REST API integration, LLM prompt engineering, error handling, and robust QA testing.</dd>
+</dl>
+<div style="margin-top: 1.5rem;">
+<a class="btn fill" href="https://github.com/vidhusjack999-cmyk/vidhu-astro-prediction" target="_blank">View GitHub Repository</a>
+</div>
+</div>
+<div class="facts">
+<div>
+<b>Level 4 Hybrid Architecture</b>
+<span>Deterministic math engine paired with orchestrated LLM interpretation</span>
+</div>
+<div>
+<b>Zero-Token QA Critic</b>
+<span>Automated Python validation loop ensuring 0% date/math hallucinations</span>
+</div>
+<div>
+<b>Resilient API Design</b>
+<span>Dynamic model discovery with robust error handling for HTTP 404, 429 & 503</span>
+</div>
+<div>
+<b>Bilingual & PDF Processing</b>
+<span>English/Tamil support with automated birth chart PDF data extraction</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="analytics">
+<h2>Executive MBA Analytics Projects</h2>
+<p class="sub">Advanced business analytics, data modeling, and visualization projects completed during my Executive MBA at PES University.</p>
+<div class="proj-grid">
+<article class="box proj">
+<h3>AI-Driven Customer Segmentation in B2C Retail</h3>
+<p class="k">Individual Dissertation &bull; KNIME & Tableau</p>
+<p>Applied RFM (Recency, Frequency, Monetary) analysis and K-Means clustering on e-commerce transaction data, segmenting customers into 5 distinct actionable tiers from Champions to Lost Customers.</p>
+<p>Used multiple linear regression to evaluate primary survey data, proving that personalization quality directly drives customer engagement and purchase intent.</p>
+</article>
+<article class="box proj">
+<h3>Marketing Campaign ROI & Timing Optimization</h3>
+<p class="k">Team Research Project &bull; Statistical Modeling</p>
+<p>Conducted exploratory data analysis, ANOVA, and multivariable linear regression on 200,000+ campaign records across 5 retail firms, achieving an $R^2$ of 0.89.</p>
+<p>Identified optimal timing slots and customer acquisition drivers to maximize marketing efficiency and return on ad spend.</p>
+</article>
+</div>
+</section>
+
+<section id="experience">
+<h2>Enterprise Experience (11+ Years)</h2>
+<p class="sub">Rigorous QA leadership, test automation, and digital transformation across multinational corporations.</p>
+
+<div class="exp-row">
+<h3>Senior Software Quality Assurance Engineer</h3>
+<p class="meta">Capita India &nbsp;|&nbsp; 2021 &ndash; 2025</p>
+<p>Led end-to-end software quality assurance and manual testing for large-scale digital transformation projects including the Integra financial system (IBSS), Fire and Rescue systems (Vision), and Greater Manchester Police public safety applications.</p>
+<div class="tech-pills">
+<span>Azure DevOps</span><span>ALM</span><span>Agile QA</span><span>UAT Sign-off</span><span>Financial Systems</span>
+</div>
+</div>
+
+<div class="exp-row">
+<h3>QA Analyst & Testing Specialist</h3>
+<p class="meta">Accenture Solutions &nbsp;|&nbsp; 2016 &ndash; 2021</p>
+<p>Executed comprehensive System Integration Testing (SIT), User Acceptance Testing (UAT), and complex regression test suites for major banking and telecom clients including Citi Bank and FairPoint Communications (Siebel/MetaSolv M6 billing systems).</p>
+<div class="tech-pills">
+<span>Postman</span><span>Swagger API</span><span>JIRA</span><span>HP ALM</span><span>Telecom Billing</span>
+</div>
+</div>
+
+<div class="exp-row">
+<h3>Associate Software Tester</h3>
+<p class="meta">HCL Technologies &nbsp;|&nbsp; 2013 &ndash; 2015</p>
+<p>Performed rigorous compatibility, functional, and network protocol testing for Xerox enterprise printer and scanner software suites across Windows, Linux, and macOS platforms.</p>
+<div class="tech-pills">
+<span>Cross-Platform Testing</span><span>Firmware QA</span><span>TCP/IP Protocols</span><span>Regression Testing</span>
+</div>
+</div>
+</section>
+
+<section id="contact" style="border:0">
+<div class="band" style="padding:2.5rem;border-radius:8px;border:1px solid var(--line)">
+<h2 style="max-width:none">Looking for QA leadership where AI and accuracy matter?</h2>
+<p style="color:var(--muted);max-width:42rem;margin:0 0 1.5rem">My unique blend of deep enterprise testing experience and modern data analytics ensures your digital transformation scales securely. Explore my repository for complete documentation and source code.</p>
+<a class="btn fill" href="https://github.com/vidhusjack999-cmyk" target="_blank">Open my GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/vidyalakshmi-raghuraman-66493b59" target="_blank">Connect on LinkedIn</a>
+<a class="btn" href="mailto:vidhusjack999@gmail.com">vidhusjack999@gmail.com</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+    <div class="wrap">&copy; 2026 Vidyalakshmi Raghuraman. Built with a focus on Digital Transformation & AI Quality Assurance.</div>
+</footer>
+
+<script>
+(function(){
+    var t=document.querySelectorAll('[role=tab]');
+    t.forEach(function(b,i){
+        b.addEventListener('click',function(){
+            t.forEach(function(x,j){
+                var on = i === j;
+                x.setAttribute('aria-selected', on);
+                document.getElementById('p'+j).hidden = !on;
+            });
+        });
+        b.addEventListener('keydown',function(e){
+            var n = e.key === 'ArrowRight' ? i+1 : e.key === 'ArrowLeft' ? i-1 : null;
+            if (n !== null) {
+                var k = t[(n + t.length) % t.length];
+                k.focus();
+                k.click();
+            }
+        });
+    });
+})();
+</script>
+</body>
+</html>
