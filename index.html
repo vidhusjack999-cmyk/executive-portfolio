@@ -519,6 +519,64 @@ section.content-section {
     line-height: 1.5;
 }
 
+/* MBA SECTION */
+.research-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.research-list {
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+}
+
+.cluster {
+    background: var(--bg);
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+}
+
+.cluster strong {
+    color: var(--cyan);
+    display: block;
+    font-size: 13.5px;
+}
+
+.cluster span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+/* CHARTS */
+.chart-block { margin-bottom: 22px; }
+.chart-block > h3 { font-size: 18px; color: #0f172a; margin-bottom: 4px; }
+.chart-block > .sub { font-size: 13.5px; color: var(--muted); margin-bottom: 16px; }
+.chart-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.chart-grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.chart-card { padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 4px 15px rgba(15,23,42,.03); }
+.chart-card h4 { font-size: 14px; color: #0f172a; margin-bottom: 2px; }
+.chart-card .cap { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.chart-box { position: relative; height: 240px; }
+.chart-box.tall { height: 420px; }
+.insight { margin-top: 12px; padding: 12px 14px; border-left: 4px solid var(--cyan); background: #f1f5f9; border-radius: 8px; font-size: 13px; color: #334155; }
+.kpi-row { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-bottom: 18px; }
+.kpi { padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.kpi strong { display: block; font-size: 24px; color: #0f172a; line-height: 1.1; }
+.kpi span { font-size: 11.5px; color: var(--muted); }
+@media (max-width: 900px) { .chart-grid, .chart-grid.two { grid-template-columns: 1fr; } .kpi-row { grid-template-columns: repeat(2, minmax(0,1fr)); } .chart-box.tall { height: 520px; } }
+
 /* CONTACT */
 .contact-band {
     padding: clamp(25px, 4vw, 45px);
@@ -567,7 +625,7 @@ footer .wrap {
 @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 35px; }
     .profile-card { max-width: 600px; }
-    .cards, .ai-hierarchy { grid-template-columns: 1fr; }
+    .cards, .ai-hierarchy, .research-grid { grid-template-columns: 1fr; }
     .project-card { grid-template-columns: 1fr; }
 }
 
@@ -620,14 +678,14 @@ footer .wrap {
                 <span class="gradient-text">digital release.</span>
             </h1>
             <p class="hero-copy">
-                I'm <strong>Vidyalakshmi Raghuraman</strong> — a Senior QA professional with 11+ years of enterprise experience across Banking & Finance, Telecom, ERP, and Public Safety. Combined with an Executive MBA in Business Analytics & Digital Transformation, I bridge deterministic engineering, data analytics, and rigorous AI quality assurance.
+                I'm <strong>Vidyalakshmi Raghuraman</strong> — a Senior QA professional with 11+ years of enterprise experience across Banking &amp; Finance, Telecom, ERP, and Public Safety. Combined with an Executive MBA in Business Analytics &amp; Digital Transformation, I bridge deterministic engineering, data analytics, and rigorous AI quality assurance.
             </p>
             <div class="hero-actions">
                 <a class="btn primary" href="#experience">Explore Track Record ↓</a>
                 <a class="btn secondary" href="https://github.com/vidhusjack999-cmyk" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
             </div>
             <div class="availability">
-                <span></span> Open to QA Lead, Test Lead, AI Quality & Analytics roles
+                <span></span> Open to QA Lead, Test Lead, AI Quality &amp; Analytics roles
             </div>
         </div>
         <aside class="profile-card">
@@ -638,10 +696,10 @@ footer .wrap {
             <h2>Quality With Business Depth</h2>
             <p>11+ years validating mission-critical enterprise systems paired with quantitative MBA analytics.</p>
             <div class="stat-grid">
-                <div class="stat"><strong>11+</strong><span>Years in QA & Delivery</span></div>
+                <div class="stat"><strong>11+</strong><span>Years in QA &amp; Delivery</span></div>
                 <div class="stat"><strong>5+</strong><span>Enterprise Domains</span></div>
                 <div class="stat"><strong>L4</strong><span>Hybrid AI Architecture</span></div>
-                <div class="stat"><strong>KNIME</strong><span>Predictive & CLV Modeling</span></div>
+                <div class="stat"><strong>KNIME</strong><span>Predictive &amp; CLV Modeling</span></div>
             </div>
         </aside>
     </div>
@@ -676,7 +734,7 @@ footer .wrap {
             </article>
             <article class="card">
                 <div class="card-icon">✳</div>
-                <h3>AI Quality & Business Analytics</h3>
+                <h3>AI Quality &amp; Business Analytics</h3>
                 <p>Decoupling deterministic calculations from statistical LLMs, mitigating hallucinations via Zero-Token critics, and modeling customer CLV and campaign ROI.</p>
                 <div class="tech-pills">
                     <span>KNIME</span><span>Tableau</span><span>Power BI</span><span>RFM/CLV</span>
@@ -704,7 +762,7 @@ footer .wrap {
                 </div>
                 <div>
                     <h3>Senior Software Consultant (QA SPOC)</h3>
-                    <p class="meta">Financial Management, Emergency Services & Public Safety Applications</p>
+                    <p class="meta">Financial Management, Emergency Services &amp; Public Safety Applications</p>
                     <p>
                         • <strong>IBSS Digital Transformation (Integra):</strong> Served as the sole offshore QA SPOC, managing test estimation, planning, and execution for the Integra financial management system, working with onsite BAs and devs to validate functional changes.<br>
                         • <strong>Fire and Service (Vision):</strong> Led functional, system, regression, and security testing in ST environments, managing incidents and defect lifecycles in Azure DevOps.<br>
@@ -724,7 +782,7 @@ footer .wrap {
                 </div>
                 <div>
                     <h3>Software Engineering Analyst</h3>
-                    <p class="meta">Telecom Billing, Banking & Corporate ERP</p>
+                    <p class="meta">Telecom Billing, Banking &amp; Corporate ERP</p>
                     <p>
                         • <strong>Citi Group / Citi Bank:</strong> Executed functional scripts and regression suites against banking requirements; prepared formal business sign-off documentation and risk assessments.<br>
                         • <strong>FairPoint Communications:</strong> Validated customer management and billing workflows using Siebel CRM and MetaSolv M6, managing defect lifecycles in HP Quality Center.<br>
@@ -744,7 +802,7 @@ footer .wrap {
                 </div>
                 <div>
                     <h3>Associate QA Engineer</h3>
-                    <p class="meta">Cross-Platform Desktop & Firmware Systems (Client: Xerox)</p>
+                    <p class="meta">Cross-Platform Desktop &amp; Firmware Systems (Client: Xerox)</p>
                     <p>
                         Executed compatibility and functional testing for Xerox printer and scanner desktop software across Windows, Linux, and macOS platforms. Validated driver upgrades, firmware flashing, and networking functionality across TCP/IP, IPv4, and IPv6 protocols.
                     </p>
@@ -797,7 +855,7 @@ footer .wrap {
                 <p>Google Gemini receives only a structured, verified "Fact Pack" alongside retrieved classical slokas. It crafts accessible bilingual narratives (English and Tamil) and speech outputs.</p>
             </div>
             <div class="ai-layer">
-                <h4>3. Agentic AI & Zero-Token Critic</h4>
+                <h4>3. Agentic AI &amp; Zero-Token Critic</h4>
                 <p>The orchestrator discovers live Gemini models, handles jitter retry on 404/429 errors, and executes a plain-Python Zero-Token Critic that intercepts hallucinations and triggers targeted revisions (max 2 retries).</p>
             </div>
         </div>
@@ -823,13 +881,13 @@ footer .wrap {
             <p class="section-intro">Capstone research applying statistical modeling, RFM behavioral clustering, and predictive campaign optimization.</p>
         </div>
 
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 22px;">
+        <div class="research-grid">
             <article class="card">
                 <span class="eyebrow" style="background:rgba(2,132,199,.08); color:var(--cyan);">INDIVIDUAL DISSERTATION</span>
                 <h3 style="font-size: 18px; margin-top: 8px;">AI-Driven Customer Segmentation in B2C Retail</h3>
                 <p style="margin-bottom: 12px;">Combined a 55-shopper survey with 2-year transactional data from the UCI Online Retail II dataset in KNIME and Tableau.</p>
-                <ul style="padding-left: 18px; font-size: 13.5px; color: var(--muted); line-height: 1.6;">
-                    <li><strong>Regression Testing ($p < 0.05$):</strong> Proved recommendation accuracy ($\beta = 0.5271$) and offer usefulness ($\beta = 0.3039$) significantly predict customer engagement ($R^2 = 0.5861$).</li>
+                <ul class="research-list">
+                    <li><strong>Regression Testing (p &lt; 0.05):</strong> Proved recommendation accuracy (β = 0.5271) and offer usefulness (β = 0.3039) significantly predict customer engagement (R<sup>2</sup> = 0.5861).</li>
                     <li><strong>Scale Reliability:</strong> Verified instrument consistency with a Cronbach’s alpha of 0.949.</li>
                     <li><strong>Customer Lifetime Value:</strong> Estimated CLV across segments to allocate marketing budgets.</li>
                 </ul>
@@ -839,38 +897,78 @@ footer .wrap {
                 <span class="eyebrow" style="background:rgba(124,58,237,.08); color:var(--purple);">TEAM CAPSTONE PROJECT</span>
                 <h3 style="font-size: 18px; margin-top: 8px;">Predictive Analytics for Campaign Timing</h3>
                 <p style="margin-bottom: 12px;">Analyzed 180,000+ campaign records across five companies in KNIME to identify key ROI drivers and optimize distribution timing.</p>
-                <ul style="padding-left: 18px; font-size: 13.5px; color: var(--muted); line-height: 1.6;">
-                    <li><strong>ROI Model Fit:</strong> Built a linear regression model reaching $R^2 = 0.89$, identifying acquisition cost and profit as the primary predictors.</li>
-                    <li><strong>ANOVA & Trends:</strong> Found morning delivery slots generated approximately half of total campaign profit.</li>
+                <ul class="research-list">
+                    <li><strong>ROI Model Fit:</strong> Built a linear regression model reaching R<sup>2</sup> = 0.89, identifying acquisition cost and profit as the primary predictors.</li>
+                    <li><strong>ANOVA &amp; Trends:</strong> Found morning delivery slots generated approximately half of total campaign profit.</li>
                     <li><strong>Workflow Automation:</strong> Engineered feature extraction workflows in KNIME and compared against baseline Excel models.</li>
                 </ul>
             </article>
         </div>
 
+
+        <!-- DISSERTATION CHARTS -->
+        <div class="chart-block">
+            <h3>Dissertation in Charts: Survey Findings</h3>
+            <p class="sub">Primary data from 55 online shoppers (Google Forms). Charts are built from the raw survey responses.</p>
+            <div class="kpi-row">
+                <div class="kpi"><strong>55</strong><span>Survey respondents</span></div>
+                <div class="kpi"><strong>70.9%</strong><span>Received personalized offers</span></div>
+                <div class="kpi"><strong>0.949</strong><span>Cronbach’s alpha</span></div>
+                <div class="kpi"><strong>2.89–3.69</strong><span>Mean range across 14 Likert items</span></div>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card"><h4>Age group</h4><p class="cap">Respondents by age band</p><div class="chart-box"><canvas id="chAge" role="img" aria-label="Bar chart of respondents by age group"></canvas></div></div>
+                <div class="chart-card"><h4>Online shopping frequency</h4><p class="cap">How often respondents shop online</p><div class="chart-box"><canvas id="chFreq" role="img" aria-label="Doughnut chart of online shopping frequency"></canvas></div></div>
+                <div class="chart-card"><h4>Received personalized marketing?</h4><p class="cap">Recommendations, emails or app notifications</p><div class="chart-box"><canvas id="chPers" role="img" aria-label="Doughnut chart of respondents who received personalized marketing"></canvas></div></div>
+            </div>
+            <div class="chart-card" style="margin-top:18px">
+                <h4>Mean agreement by survey statement (1–5 scale)</h4>
+                <p class="cap">Dashed line marks the neutral midpoint (3.0)</p>
+                <div class="chart-box tall"><canvas id="chItems" role="img" aria-label="Horizontal bar chart of mean scores for 14 survey statements"></canvas></div>
+                <div class="insight">Respondents agree most that retailers use past purchases (3.69) and browsing behavior (3.67) to personalize. Scores for engagement-style items, such as interaction (2.89) and exploring more (2.98), sit slightly below neutral.</div>
+            </div>
+            <div class="chart-grid two" style="margin-top:18px">
+                <div class="chart-card"><h4>Regression: what predicts engagement?</h4><p class="cap">Standardized effect from the dissertation (p &lt; 0.05)</p><div class="chart-box"><canvas id="chBeta" role="img" aria-label="Bar chart of regression coefficients"></canvas></div></div>
+                <div class="chart-card"><h4>Variance explained (R<sup>2</sup>)</h4><p class="cap">Share of variation each model explains</p><div class="chart-box"><canvas id="chR2" role="img" aria-label="Bar chart of R squared for the two models"></canvas></div></div>
+            </div>
+        </div>
+
+        <div class="chart-block">
+            <h3>Dissertation in Charts: Customer Segments (RFM, K-Means &amp; CLV)</h3>
+            <p class="sub">Transactional data from 5,866 customers in the UCI Online Retail II dataset, segmented in KNIME.</p>
+            <div class="chart-grid two">
+                <div class="chart-card"><h4>Customers per segment</h4><p class="cap">Number of customers</p><div class="chart-box"><canvas id="chSegN" role="img" aria-label="Bar chart of customers per segment"></canvas></div></div>
+                <div class="chart-card"><h4>Share of spend vs. share of CLV</h4><p class="cap">Percent of total by segment</p><div class="chart-box"><canvas id="chSegValue" role="img" aria-label="Grouped bar chart of spend share and CLV share per segment"></canvas></div></div>
+                <div class="chart-card"><h4>Average recency (days since last purchase)</h4><p class="cap">Lower is better</p><div class="chart-box"><canvas id="chSegRec" role="img" aria-label="Bar chart of average recency per segment"></canvas></div></div>
+                <div class="chart-card"><h4>Average purchase frequency</h4><p class="cap">Orders per customer</p><div class="chart-box"><canvas id="chSegFreq" role="img" aria-label="Bar chart of average frequency per segment"></canvas></div></div>
+            </div>
+            <div class="insight" style="margin-top:18px">Champions are 21% of customers but about 67% of spend and 94% of estimated CLV, while Lost Customers are 39% of customers and only 6% of spend. This is why the segment-specific actions below matter.</div>
+        </div>
+
         <!-- 5 K-MEANS SEGMENTS -->
         <article class="card">
-            <h3 style="font-size: 17px; margin-bottom: 6px;">Customer Clusters & Strategic Actions (From Dissertation Presentation)</h3>
+            <h3 style="font-size: 17px; margin-bottom: 6px;">Customer Clusters &amp; Strategic Actions (From Dissertation Presentation)</h3>
             <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 15px;">Segmentation derived through Recency, Frequency, and Monetary (RFM) K-Means clustering:</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px;">
-                <div style="background: var(--bg); padding: 14px; border-radius: 10px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display:block; font-size:13.5px;">1. Champions</strong>
-                    <span style="font-size: 12px; color: var(--muted);">Highest spend and frequency. <em>Action:</em> Reward with VIP loyalty programs.</span>
+            <div class="cluster-grid">
+                <div class="cluster">
+                    <strong>1. Champions</strong>
+                    <span>Highest spend and frequency. <em>Action:</em> Reward with VIP loyalty programs.</span>
                 </div>
-                <div style="background: var(--bg); padding: 14px; border-radius: 10px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display:block; font-size:13.5px;">2. Loyal Customers</strong>
-                    <span style="font-size: 12px; color: var(--muted);">Consistent high spend. <em>Action:</em> Upsell and cross-sell higher value tiers.</span>
+                <div class="cluster">
+                    <strong>2. Loyal Customers</strong>
+                    <span>Consistent high spend. <em>Action:</em> Upsell and cross-sell higher value tiers.</span>
                 </div>
-                <div style="background: var(--bg); padding: 14px; border-radius: 10px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display:block; font-size:13.5px;">3. Potential Loyalists</strong>
-                    <span style="font-size: 12px; color: var(--muted);">Moderate activity. <em>Action:</em> Nurture with personalized recommendations.</span>
+                <div class="cluster">
+                    <strong>3. Potential Loyalists</strong>
+                    <span>Moderate activity. <em>Action:</em> Nurture with personalized recommendations.</span>
                 </div>
-                <div style="background: var(--bg); padding: 14px; border-radius: 10px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display:block; font-size:13.5px;">4. At Risk</strong>
-                    <span style="font-size: 12px; color: var(--muted);">Declining engagement. <em>Action:</em> Win-back campaigns and targeted discounts.</span>
+                <div class="cluster">
+                    <strong>4. At Risk</strong>
+                    <span>Declining engagement. <em>Action:</em> Win-back campaigns and targeted discounts.</span>
                 </div>
-                <div style="background: var(--bg); padding: 14px; border-radius: 10px; border: 1px solid var(--line);">
-                    <strong style="color: var(--cyan); display:block; font-size:13.5px;">5. Lost Customers</strong>
-                    <span style="font-size: 12px; color: var(--muted);">Longest inactivity. <em>Action:</em> Low-cost, automated re-engagement outreach.</span>
+                <div class="cluster">
+                    <strong>5. Lost Customers</strong>
+                    <span>Longest inactivity. <em>Action:</em> Low-cost, automated re-engagement outreach.</span>
                 </div>
             </div>
         </article>
@@ -903,6 +1001,65 @@ footer .wrap {
         <span>Senior QA Consultant · Executive MBA in Business Analytics</span>
     </div>
 </footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function () {
+    if (typeof Chart === "undefined") { return; }
+    Chart.defaults.font.family = 'Inter, -apple-system, "Segoe UI", Roboto, sans-serif';
+    Chart.defaults.font.size = 12;
+    Chart.defaults.color = "#475569";
+    var C = { cyan: "#0284c7", purple: "#7c3aed", gold: "#b45309", green: "#10b981", red: "#e11d48", grey: "#94a3b8" };
+    var segLabels = ["Champions", "Loyal", "Potential Loyalists", "At Risk", "Lost"];
+    var segColors = [C.cyan, C.green, C.purple, C.gold, C.grey];
+    var noLegend = { legend: { display: false } };
+    function bar(id, labels, data, colors, extra) {
+        var el = document.getElementById(id); if (!el) { return; }
+        new Chart(el, { type: "bar", data: { labels: labels, datasets: [{ data: data, backgroundColor: colors, borderRadius: 6 }] },
+            options: Object.assign({ maintainAspectRatio: false, plugins: noLegend, scales: { y: { beginAtZero: true, grid: { color: "#e2e8f0" } }, x: { grid: { display: false } } } }, extra || {}) });
+    }
+    function donut(id, labels, data, colors) {
+        var el = document.getElementById(id); if (!el) { return; }
+        new Chart(el, { type: "doughnut", data: { labels: labels, datasets: [{ data: data, backgroundColor: colors, borderWidth: 2, borderColor: "#fff" }] },
+            options: { maintainAspectRatio: false, cutout: "58%", plugins: { legend: { position: "bottom", labels: { boxWidth: 12 } } } } });
+    }
+
+    /* Survey */
+    bar("chAge", ["18–25", "26–35", "36–45", "46–55", "55+"], [15, 19, 11, 6, 4], C.cyan);
+    donut("chFreq", ["Monthly", "Weekly", "Occasionally", "Rarely"], [19, 15, 15, 6], [C.cyan, C.purple, C.gold, C.grey]);
+    donut("chPers", ["Yes (39)", "No (16)"], [39, 16], [C.green, C.grey]);
+
+    var items = ["Recommended products are relevant", "Recommendations improve experience", "Retailers use past purchases", "Offers reflect my browsing", "Recommendations are accurate", "Offers are useful",
+        "Increases my interaction", "I spend more time exploring", "Encourages me to browse more", "Increases purchase intention", "Offers influence my decisions", "More effective than generic ads", "Increases my satisfaction", "More likely to keep shopping"];
+    var means = [3.36, 3.38, 3.69, 3.67, 3.09, 3.18, 2.89, 2.98, 3.00, 3.09, 3.13, 3.25, 3.29, 3.24];
+    var midLine = { id: "midLine", afterDraw: function (chart) {
+        var x = chart.scales.x.getPixelForValue(3), a = chart.chartArea, c = chart.ctx;
+        c.save(); c.setLineDash([5, 4]); c.strokeStyle = "#0f172a"; c.beginPath(); c.moveTo(x, a.top); c.lineTo(x, a.bottom); c.stroke(); c.restore(); } };
+    var itemsEl = document.getElementById("chItems");
+    if (itemsEl) {
+        new Chart(itemsEl, { type: "bar", plugins: [midLine],
+            data: { labels: items, datasets: [{ data: means, backgroundColor: means.map(function (m) { return m >= 3.25 ? C.cyan : (m >= 3 ? C.purple : C.gold); }), borderRadius: 5 }] },
+            options: { indexAxis: "y", maintainAspectRatio: false, plugins: noLegend, scales: { x: { min: 1, max: 5, grid: { color: "#e2e8f0" } }, y: { grid: { display: false } } } } });
+    }
+
+    /* Regression figures reported in the dissertation */
+    bar("chBeta", ["Recommendation accuracy", "Offer usefulness"], [0.5271, 0.3039], [C.cyan, C.purple], { scales: { y: { beginAtZero: true, max: 0.7, title: { display: true, text: "β coefficient" }, grid: { color: "#e2e8f0" } }, x: { grid: { display: false } } } });
+    bar("chR2", ["Engagement model", "Campaign ROI model"], [0.5861, 0.89], [C.cyan, C.gold], { scales: { y: { beginAtZero: true, max: 1, grid: { color: "#e2e8f0" } }, x: { grid: { display: false } } } });
+
+    /* Segments */
+    bar("chSegN", segLabels, [1250, 1146, 505, 698, 2267], segColors);
+    var valEl = document.getElementById("chSegValue");
+    if (valEl) {
+        new Chart(valEl, { type: "bar", data: { labels: segLabels, datasets: [
+            { label: "% of total spend", data: [67.4, 15.4, 2.5, 8.7, 6.0], backgroundColor: C.cyan, borderRadius: 5 },
+            { label: "% of total CLV", data: [93.7, 3.0, 0.1, 2.9, 0.2], backgroundColor: C.purple, borderRadius: 5 }] },
+            options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom", labels: { boxWidth: 12 } } }, scales: { y: { beginAtZero: true, max: 100, grid: { color: "#e2e8f0" }, ticks: { callback: function (v) { return v + "%"; } } }, x: { grid: { display: false } } } } });
+    }
+    bar("chSegRec", segLabels, [19.8, 72.4, 27.7, 362.8, 357.3], segColors);
+    bar("chSegFreq", segLabels, [17.2, 6.0, 1.5, 5.4, 1.5], segColors);
+})();
+</script>
 
 </body>
 </html>
