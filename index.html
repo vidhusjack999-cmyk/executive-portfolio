@@ -483,10 +483,10 @@ section.content-section {
     border-color: var(--gold);
 }
 
-/* AI HIERARCHY GRID */
+/* AI 4-LAYER HIERARCHY GRID */
 .ai-hierarchy {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin-top: 20px;
 }
@@ -499,22 +499,18 @@ section.content-section {
     border-top: 4px solid var(--cyan);
 }
 
-.ai-layer:nth-child(2) {
-    border-top-color: var(--purple);
-}
-
-.ai-layer:nth-child(3) {
-    border-top-color: var(--gold);
-}
+.ai-layer:nth-child(2) { border-top-color: var(--purple); }
+.ai-layer:nth-child(3) { border-top-color: var(--gold); }
+.ai-layer:nth-child(4) { border-top-color: #059669; }
 
 .ai-layer h4 {
-    font-size: 15px;
+    font-size: 14.5px;
     color: #0f172a;
     margin-bottom: 6px;
 }
 
 .ai-layer p {
-    font-size: 12.8px;
+    font-size: 12.5px;
     color: var(--muted);
     line-height: 1.5;
 }
@@ -558,7 +554,6 @@ section.content-section {
     color: var(--muted);
 }
 
-
 /* CHARTS */
 .chart-block { margin-bottom: 22px; }
 .chart-block > h3 { font-size: 18px; color: #0f172a; margin-bottom: 4px; }
@@ -575,7 +570,6 @@ section.content-section {
 .kpi { padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
 .kpi strong { display: block; font-size: 24px; color: #0f172a; line-height: 1.1; }
 .kpi span { font-size: 11.5px; color: var(--muted); }
-@media (max-width: 900px) { .chart-grid, .chart-grid.two { grid-template-columns: 1fr; } .kpi-row { grid-template-columns: repeat(2, minmax(0,1fr)); } .chart-box.tall { height: 520px; } }
 
 /* CONTACT */
 .contact-band {
@@ -622,11 +616,18 @@ footer .wrap {
 }
 
 /* RESPONSIVE */
+@media (max-width: 990px) {
+    .ai-hierarchy { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 35px; }
     .profile-card { max-width: 600px; }
-    .cards, .ai-hierarchy, .research-grid { grid-template-columns: 1fr; }
+    .cards, .research-grid { grid-template-columns: 1fr; }
     .project-card { grid-template-columns: 1fr; }
+    .chart-grid, .chart-grid.two { grid-template-columns: 1fr; }
+    .kpi-row { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .chart-box.tall { height: 520px; }
 }
 
 @media (max-width: 650px) {
@@ -638,6 +639,7 @@ footer .wrap {
     .nav-links a:not(:last-child) { display: none; }
     .hero { padding: 45px 0 40px; }
     section.content-section { padding: 45px 0; }
+    .ai-hierarchy { grid-template-columns: 1fr; }
     .exp-row { grid-template-columns: 1fr; gap: 6px; padding: 18px; }
     .hero-actions .btn { width: 100%; }
 }
@@ -815,13 +817,13 @@ footer .wrap {
     </div>
 </section>
 
-<!-- FLAGSHIP PROJECT: VIDHU ASTRO PREDICTION & LAYERS OF AI -->
+<!-- FLAGSHIP PROJECT: VIDHU ASTRO PREDICTION & 4-LAYER AI ARCHITECTURE -->
 <section class="content-section" id="projects">
     <div class="wrap">
         <div class="section-head">
-            <p class="kicker">FLAGSHIP AI PROJECT</p>
-            <h2 class="section-title">Vidhu Astro Prediction: Level 4 Agentic Architecture</h2>
-            <p class="section-intro">An AI-assisted Vedic astrology application engineered to demonstrate how deterministic code, classical knowledge, and generative models separate concerns to eliminate hallucinations.</p>
+            <p class="kicker">FLAGSHIP AI ARCHITECTURE &amp; QUALITY AUDIT</p>
+            <h2 class="section-title">Vidhu Astro Prediction: Level 4 Agentic Pipeline</h2>
+            <p class="section-intro">An AI-assisted Vedic astrology application engineered to demonstrate how deterministic computation, classical retrieval, and generative language models decouple to systematically prevent hallucinations.</p>
         </div>
 
         <article class="project-card">
@@ -829,10 +831,10 @@ footer .wrap {
                 <p class="kicker" style="color:var(--purple);">ENTERPRISE AI AUDITING IN PRACTICE</p>
                 <h3>Where Deterministic Code Decouples from the LLM</h3>
                 <p>
-                    Language models on their own hallucinate mathematical coordinates, planetary degrees, and Dasa intervals. This project implements a 4-layer pipeline where Python and the Swiss Ephemeris compute exact truth first, leaving the LLM to function strictly as a linguistic narrator.
+                    Language models inherently hallucinate mathematical coordinates, planetary cusps, and date boundaries. Vidhu Astro implements a strict separation of concerns: Python and the Swiss Ephemeris compute ground-truth astronomy first, creating an immutable Fact Pack. The LLM functions strictly as a linguistic narrator, guarded by automated retry logic and cancellation business rules (e.g., Kemadruma Yoga cancellation logic, Natal-First prioritization).
                 </p>
                 <div class="pills">
-                    <span>Python 3.13</span><span>Flask</span><span>pyswisseph</span><span>Google Gemini</span><span>Zero-Token Critic</span><span>SQLite WAL</span>
+                    <span>Python 3.13</span><span>Flask</span><span>pyswisseph</span><span>Google Gemini API</span><span>Zero-Token Critic</span><span>RAG (Jathaka Alankaram)</span><span>SQLite (WAL Mode)</span><span>Jitter Backoff</span>
                 </div>
                 <div class="hero-actions">
                     <a class="btn primary" href="https://github.com/vidhusjack999-cmyk/vidhu-astro-prediction" target="_blank" rel="noopener noreferrer">Source Code ↗</a>
@@ -844,30 +846,56 @@ footer .wrap {
             </div>
         </article>
 
-        <!-- LAYERS OF AI MAPPING -->
+        <!-- COMPLETE 4-LAYER ARCHITECTURE MAPPING -->
         <div class="ai-hierarchy">
             <div class="ai-layer">
-                <h4>1. Classical AI (Base Layer)</h4>
-                <p>Deterministic expert system in Python using the Swiss Ephemeris (<code>pyswisseph</code>) to calculate exact planetary degrees, house cusps, and Vimshottari Dasa intervals. The LLM never computes math.</p>
+                <h4>Layer 1: Math Engine</h4>
+                <p><strong>Deterministic Classical Base:</strong> Python + Swiss Ephemeris (<code>pyswisseph</code>) calculates planetary degrees, house cusps, and Vimshottari Dasa dates. The LLM never computes math.</p>
             </div>
             <div class="ai-layer">
-                <h4>2. Generative AI (Narrator)</h4>
-                <p>Google Gemini receives only a structured, verified "Fact Pack" alongside retrieved classical slokas. It crafts accessible bilingual narratives (English and Tamil) and speech outputs.</p>
+                <h4>Layer 2: RAG Researcher</h4>
+                <p><strong>Classical Knowledge Lookup:</strong> Key-indexed retrieval attaching verified classical slokas (e.g., <em>Jathaka Alankaram</em>) to the Fact Pack based strictly on computed planetary positions.</p>
             </div>
             <div class="ai-layer">
-                <h4>3. Agentic AI &amp; Zero-Token Critic</h4>
-                <p>The orchestrator discovers live Gemini models, handles jitter retry on 404/429 errors, and executes a plain-Python Zero-Token Critic that intercepts hallucinations and triggers targeted revisions (max 2 retries).</p>
+                <h4>Layer 3: Gemini Interpreter</h4>
+                <p><strong>Constrained Generative Narrator:</strong> Receives only the verified Fact Pack. Formulates contextual, bilingual interpretations in English and Tamil without inventing astronomical facts.</p>
+            </div>
+            <div class="ai-layer">
+                <h4>Layer 4: Zero-Token Critic</h4>
+                <p><strong>Autonomous QA Audit:</strong> Plain-Python validation running at zero LLM token cost. Cross-references output against the Fact Pack; triggers targeted revisions (max 2 retries) on mismatch.</p>
             </div>
         </div>
 
+        <!-- ENTERPRISE RESILIENCE & DATA INTEGRITY SPECIFICATIONS -->
+        <div class="cards" style="margin-top: 18px; grid-template-columns: repeat(3, minmax(0, 1fr));">
+            <article class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Automated Model Discovery</h3>
+                <p>Dynamic fallback orchestrator that probes available Gemini endpoints, mitigating breaking changes when specific model versions are deprecated by Google.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>HTTP 404 &amp; 429 Jitter Backoff</h3>
+                <p>Exponential backoff with randomized jitter to handle upstream rate limits and transient gateway timeouts without degrading user sessions.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">💾</div>
+                <h3>SQLite WAL State &amp; Quota Tracking</h3>
+                <p>Write-Ahead Logging (WAL) mode enables concurrent reads and writes, enforcing daily API call quotas and state isolation per user request.</p>
+            </article>
+        </div>
+
         <!-- DEMO VIDEO CONTAINER -->
-        <div style="margin-top: 30px; background: #ffffff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: 0 4px 15px rgba(15,23,42,.03);">
-            <h3 style="font-size: 19px; color: #0f172a; margin-bottom: 6px;">Watch the Architecture Walkthrough</h3>
+        <div id="demo" style="margin-top: 25px; background: #ffffff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: 0 4px 15px rgba(15,23,42,.03);">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom: 8px;">
+                <h3 style="font-size: 19px; color: #0f172a; margin: 0;">Watch the Architecture Walkthrough</h3>
+                <span class="status" style="background:#e0f2fe; color:var(--cyan);">Duration: 2m 56s · Narrated Demo</span>
+            </div>
             <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 16px;">
-                Narrated demonstration illustrating the 4-layer agentic workflow, fact-pack handoff, and zero-token critic.
+                Full technical demonstration illustrating the 4-layer agentic workflow, fact-pack handoff, zero-token regex verification, and dynamic fallback execution.
             </p>
-            <video id="demo" controls preload="metadata" playsinline aria-label="Vidhu Astro Prediction demo walkthrough" style="width:100%; border-radius: 12px; border: 1px solid var(--line); background: #0f172a;" src="vidhu_astro_narrated.mp4"></video>
-            <p style="font-size: 12px; color: var(--muted); margin-top: 10px;">The first 10 seconds feature a conceptual UI animation; the remaining duration showcases screenshots and workflows of the running application.</p>
+            <video controls preload="metadata" playsinline aria-label="Vidhu Astro Prediction demo walkthrough" style="width:100%; border-radius: 12px; border: 1px solid var(--line); background: #0f172a;" src="vidhu_astro_narrated.mp4"></video>
+            <p style="font-size: 12px; color: var(--muted); margin-top: 10px;">The opening 10 seconds feature a conceptual UI animation; the remaining duration showcases direct screen captures of the running Flask/Gemini system.</p>
         </div>
     </div>
 </section>
@@ -895,16 +923,16 @@ footer .wrap {
 
             <article class="card">
                 <span class="eyebrow" style="background:rgba(124,58,237,.08); color:var(--purple);">TEAM CAPSTONE PROJECT</span>
-                <h3 style="font-size: 18px; margin-top: 8px;">Predictive Analytics for Campaign Timing</h3>
-                <p style="margin-bottom: 12px;">Analyzed 180,000+ campaign records across five companies in KNIME to identify key ROI drivers and optimize distribution timing.</p>
+                <h3 style="font-size: 18px; margin-top: 8px;">Campaign Performance Analytics &amp; ROI Modeling</h3>
+                <p style="margin-bottom: 12px;">Analyzed 200,000 campaign records across five companies (full year 2021) using ANOVA, regression and exploratory analysis in KNIME and Excel, to test whether timing and other factors actually move ROI.</p>
                 <ul class="research-list">
-                    <li><strong>ROI Model Fit:</strong> Built a linear regression model reaching R<sup>2</sup> = 0.89, identifying acquisition cost and profit as the primary predictors.</li>
-                    <li><strong>ANOVA &amp; Trends:</strong> Found morning delivery slots generated approximately half of total campaign profit.</li>
-                    <li><strong>Workflow Automation:</strong> Engineered feature extraction workflows in KNIME and compared against baseline Excel models.</li>
+                    <li><strong>Hypothesis testing:</strong> Ran one-way ANOVA on 11 factors against ROI. None was significant at 5%; time pattern (p = 0.067) and location (p = 0.058) came closest.</li>
+                    <li><strong>ROI model:</strong> Linear regression reached R<sup>2</sup> = 0.89, driven almost entirely by profit and acquisition cost. Timing variables added no significant explanatory power.</li>
+                    <li><strong>Volume vs. efficiency:</strong> The morning slot holds 50% of total profit, but also 50% of campaigns, so profit per campaign is flat across time slots.</li>
+                    <li><strong>Tooling:</strong> Compared KNIME and Excel on 200K rows; KNIME handled the volume and regression where Excel stalled.</li>
                 </ul>
             </article>
         </div>
-
 
         <!-- DISSERTATION CHARTS -->
         <div class="chart-block">
@@ -972,6 +1000,52 @@ footer .wrap {
                 </div>
             </div>
         </article>
+
+        <!-- TEAM CAPSTONE CHARTS -->
+        <div class="chart-block" style="margin-top:28px">
+            <h3>Team Capstone in Charts: Campaign Analytics &amp; ROI Modeling</h3>
+            <p class="sub">200,000 campaigns, 5 companies, Jan–Dec 2021. Every chart is computed from the raw campaign data.</p>
+            <div class="kpi-row">
+                <div class="kpi"><strong>200,000</strong><span>Campaigns analysed</span></div>
+                <div class="kpi"><strong>₹1,252 Cr</strong><span>Total profit on ₹250 Cr acquisition cost</span></div>
+                <div class="kpi"><strong>5.0×</strong><span>Average ROI, flat across segments</span></div>
+                <div class="kpi"><strong>0 of 11</strong><span>Factors significant for ROI at 5%</span></div>
+            </div>
+
+            <div class="chart-grid two">
+                <div class="chart-card"><h4>Is morning really the best slot?</h4><p class="cap">Share of day’s hours vs. share of campaigns vs. share of profit</p><div class="chart-box"><canvas id="chShare" role="img" aria-label="Grouped bar chart comparing share of hours, campaigns and profit by time slot"></canvas></div></div>
+                <div class="chart-card"><h4>Average profit per campaign (₹ thousand)</h4><p class="cap">Efficiency is the same in every slot</p><div class="chart-box"><canvas id="chAvgSlot" role="img" aria-label="Bar chart of average profit per campaign by time slot"></canvas></div></div>
+            </div>
+            <div class="insight" style="margin-bottom:18px">Morning delivers 50% of profit because the “Morning” bucket covers 12 of 24 hours (00:00–11:59) and carries 50% of campaigns. Per campaign, afternoon (₹62.8K) and morning (₹62.5K) differ by 0.4%. The headline share reflects volume, not performance.</div>
+
+            <div class="chart-card" style="margin-bottom:18px">
+                <h4>Average profit per campaign by hour of day (₹ thousand)</h4>
+                <p class="cap">No peak hour exists in the data</p>
+                <div class="chart-box"><canvas id="chHour" role="img" aria-label="Line chart of average profit per campaign for each hour of the day"></canvas></div>
+            </div>
+
+            <div class="chart-grid two">
+                <div class="chart-card"><h4>ANOVA p-value by factor (vs. ROI)</h4><p class="cap">Bars to the right of the dashed line (p = 0.05) are not significant</p><div class="chart-box tall"><canvas id="chAnova" role="img" aria-label="Horizontal bar chart of ANOVA p-values for 11 factors"></canvas></div></div>
+                <div class="chart-card"><h4>What drives the ROI model? (|t-value|, log scale)</h4><p class="cap">Dashed line marks |t| = 1.96 (5% significance)</p><div class="chart-box tall"><canvas id="chTval" role="img" aria-label="Horizontal bar chart of regression t-values on a log scale"></canvas></div></div>
+            </div>
+            <div class="insight" style="margin:18px 0">The R<sup>2</sup> of 0.89 comes from profit and acquisition cost, which are mechanically tied to ROI (ROI is roughly profit ÷ cost, about 5×). Frequency, location, time pattern and impressions all have |t| below 1.4. Honest takeaway: this dataset shows no evidence that timing changes ROI.</div>
+
+            <div class="chart-card">
+                <h4>Spend scales profit linearly, ROI stays flat</h4>
+                <p class="cap">Campaigns grouped into five acquisition-cost quintiles</p>
+                <div class="chart-box"><canvas id="chCost" role="img" aria-label="Combined chart of average profit and ROI by acquisition cost quintile"></canvas></div>
+            </div>
+
+            <div class="card" style="margin-top:18px">
+                <h3>Analyst recommendations</h3>
+                <ul class="research-list">
+                    <li><strong>Do not reallocate budget by time slot on this evidence.</strong> Per-campaign profit and ROI are statistically indistinguishable across slots.</li>
+                    <li><strong>Test timing properly.</strong> Run controlled A/B experiments with matched audiences and hold-outs, instead of comparing aggregates.</li>
+                    <li><strong>Re-fit the model on timing and audience features only.</strong> Removing profit from the predictors would show whether any real signal exists.</li>
+                    <li><strong>Improve conversion quality rather than spend alone.</strong> Conversion rate is flat at about 8% across every segment, so messaging and targeting are the open levers.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -1001,7 +1075,6 @@ footer .wrap {
         <span>Senior QA Consultant · Executive MBA in Business Analytics</span>
     </div>
 </footer>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
@@ -1058,6 +1131,55 @@ footer .wrap {
     }
     bar("chSegRec", segLabels, [19.8, 72.4, 27.7, 362.8, 357.3], segColors);
     bar("chSegFreq", segLabels, [17.2, 6.0, 1.5, 5.4, 1.5], segColors);
+
+    /* Team capstone */
+    var slots = ["Morning", "Afternoon", "Evening", "Night"];
+    var shareEl = document.getElementById("chShare");
+    if (shareEl) {
+        new Chart(shareEl, { type: "bar", data: { labels: slots, datasets: [
+            { label: "% of day's hours", data: [50, 25, 16.7, 8.3], backgroundColor: C.grey, borderRadius: 4 },
+            { label: "% of campaigns", data: [50.1, 25.0, 16.7, 8.2], backgroundColor: C.cyan, borderRadius: 4 },
+            { label: "% of profit", data: [50.0, 25.0, 16.7, 8.3], backgroundColor: C.purple, borderRadius: 4 }] },
+            options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom", labels: { boxWidth: 12 } } }, scales: { y: { beginAtZero: true, grid: { color: "#e2e8f0" }, ticks: { callback: function (v) { return v + "%"; } } }, x: { grid: { display: false } } } } });
+    }
+    bar("chAvgSlot", slots, [62.5, 62.8, 62.3, 62.7], [C.cyan, C.purple, C.gold, C.grey], { scales: { y: { beginAtZero: true, max: 80, grid: { color: "#e2e8f0" }, title: { display: true, text: "₹ thousand" } }, x: { grid: { display: false } } } });
+
+    var hourEl = document.getElementById("chHour");
+    if (hourEl) {
+        var hrs = []; for (var i = 0; i < 24; i++) { hrs.push((i < 10 ? "0" : "") + i + ":00"); }
+        new Chart(hourEl, { type: "line", data: { labels: hrs, datasets: [{ data: [62.6, 62.6, 63.1, 62.6, 62.4, 62.3, 62.4, 62.4, 62.4, 62.6, 62.2, 62.7, 63.0, 63.0, 62.8, 62.7, 62.9, 62.4, 62.5, 62.3, 62.3, 62.3, 62.9, 62.5],
+            borderColor: C.cyan, backgroundColor: "rgba(2,132,199,.12)", fill: true, tension: 0.3, pointRadius: 3 }] },
+            options: { maintainAspectRatio: false, plugins: noLegend, scales: { y: { beginAtZero: true, max: 80, grid: { color: "#e2e8f0" }, title: { display: true, text: "₹ thousand" } }, x: { grid: { display: false }, ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } } } } });
+    }
+
+    var refLine = function (id, axisValue) { return { id: id, afterDraw: function (chart) {
+        var x = chart.scales.x.getPixelForValue(axisValue), a = chart.chartArea, c = chart.ctx;
+        c.save(); c.setLineDash([5, 4]); c.strokeStyle = C.red; c.lineWidth = 1.5; c.beginPath(); c.moveTo(x, a.top); c.lineTo(x, a.bottom); c.stroke(); c.restore(); } }; };
+    var anovaEl = document.getElementById("chAnova");
+    if (anovaEl) {
+        var af = ["Location", "Time pattern", "Frequency", "Season", "Channel", "Campaign type", "Language", "Duration", "Company", "Target audience", "Customer segment"];
+        var ap = [0.0583, 0.067, 0.0934, 0.0957, 0.1711, 0.3969, 0.5212, 0.5951, 0.695, 0.9395, 0.9926];
+        new Chart(anovaEl, { type: "bar", plugins: [refLine("p05", 0.05)], data: { labels: af, datasets: [{ data: ap, backgroundColor: ap.map(function (v) { return v < 0.1 ? C.gold : C.cyan; }), borderRadius: 5 }] },
+            options: { indexAxis: "y", maintainAspectRatio: false, plugins: noLegend, scales: { x: { min: 0, max: 1, grid: { color: "#e2e8f0" }, title: { display: true, text: "p-value" } }, y: { grid: { display: false } } } } });
+    }
+    var tEl = document.getElementById("chTval");
+    if (tEl) {
+        var tl = ["Profit", "Acquisition cost", "Conversion rate", "Frequency (max)", "Location (max)", "Impressions", "Time pattern (max)"];
+        var tv = [1150.57, 789.68, 1.36, 1.33, 1.06, 0.98, 0.90];
+        new Chart(tEl, { type: "bar", plugins: [refLine("t196", 1.96)], data: { labels: tl, datasets: [{ data: tv, backgroundColor: tv.map(function (v) { return v > 1.96 ? C.purple : C.grey; }), borderRadius: 5 }] },
+            options: { indexAxis: "y", maintainAspectRatio: false, plugins: noLegend, scales: { x: { type: "logarithmic", min: 0.5, max: 2000, grid: { color: "#e2e8f0" }, title: { display: true, text: "|t-value| (log scale)" } }, y: { grid: { display: false } } } } });
+    }
+
+    var costEl = document.getElementById("chCost");
+    if (costEl) {
+        new Chart(costEl, { data: { labels: ["Q1 (₹6.5K)", "Q2 (₹9.5K)", "Q3 (₹12.5K)", "Q4 (₹15.5K)", "Q5 (₹18.5K)"], datasets: [
+            { type: "bar", label: "Avg profit (₹ thousand)", data: [32.5, 47.4, 62.5, 77.5, 93.0], backgroundColor: C.cyan, borderRadius: 5, yAxisID: "y" },
+            { type: "line", label: "Avg ROI (×)", data: [5.0, 4.99, 5.0, 5.0, 5.02], borderColor: C.gold, backgroundColor: C.gold, pointRadius: 4, yAxisID: "y1" }] },
+            options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom", labels: { boxWidth: 12 } } }, scales: {
+                y: { beginAtZero: true, grid: { color: "#e2e8f0" }, title: { display: true, text: "₹ thousand" } },
+                y1: { position: "right", min: 0, max: 10, grid: { display: false }, title: { display: true, text: "ROI (×)" } },
+                x: { grid: { display: false }, title: { display: true, text: "Acquisition-cost quintile (average cost)" } } } } });
+    }
 })();
 </script>
 
