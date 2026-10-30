@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidhu Astro Prediction | My Journey, Astrology Basics and Your Reading</title>
+<style>
+:root {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --muted: #475569;
+    --line: #cbd5e1;
+    --cyan: #0284c7;
+    --purple: #7c3aed;
+    --gold: #b45309;
+    --green: #0a5223;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 0%, rgba(2,132,199,.06), transparent 34rem),
+        radial-gradient(ellipse at 85% 10%, rgba(124,58,237,.06), transparent 38rem),
+        var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.wrap { width: min(1160px, calc(100% - 40px)); margin: auto; }
+
+/* HEADER */
+header { position: sticky; top: 0; z-index: 100; background: rgba(248,250,252,.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+nav { min-height: 74px; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+.brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: #fff; background: linear-gradient(135deg, var(--cyan), var(--purple)); font-size: 16px; font-weight: 800; }
+.brand small { display: block; color: var(--muted); font-size: 10px; letter-spacing: 1.5px; font-weight: 700; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border: 1px solid var(--line); border-radius: 10px; font-weight: 700; font-size: 13.5px; transition: .2s ease; cursor: pointer; background: #fff; color: #1e293b; }
+.btn:hover { transform: translateY(-2px); border-color: var(--cyan); }
+
+/* INTRO */
+main { padding: 55px 0 70px; }
+.kicker { color: var(--cyan); font-size: 11.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.page-title { margin: 4px 0 10px; font-size: clamp(30px, 4.2vw, 48px); line-height: 1.15; letter-spacing: -1.2px; }
+.page-intro { max-width: 720px; color: var(--muted); font-size: 15.5px; margin-bottom: 30px; }
+
+/* KPI CARDS (tabs) with Background Images */
+.kpi-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 28px; }
+.kpi-card {
+    position: relative;
+    text-align: left; font: inherit; cursor: pointer;
+    padding: 22px; border: 1px solid var(--line); border-top: 4px solid var(--c, var(--cyan));
+    border-radius: 16px; box-shadow: 0 4px 15px rgba(15,23,42,.03); transition: .2s ease;
+    background-color: #0f172a;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Background image assignments (Make sure these images are in your folder!) */
+.kpi-card:nth-child(1) { --c: var(--gold); background-image: url('bg_journey.jpg'); }
+.kpi-card:nth-child(2) { --c: var(--purple); background-image: url('bg_science.jpg'); }
+.kpi-card:nth-child(3) { --c: var(--green); background-image: url('bg_chart.jpg'); }
+
+/* Dark overlay to ensure text is readable over images */
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+.kpi-card:hover::before { background: rgba(15, 23, 42, 0.6); }
+.kpi-card[aria-selected="true"]::before { background: rgba(15, 23, 42, 0.85); }
+.kpi-card[aria-selected="true"] { border-color: var(--c); box-shadow: 0 8px 25px rgba(15,23,42,.15); }
+.kpi-card:hover { transform: translateY(-3px); }
+
+/* Ensure text stays above the dark overlay */
+.kpi-card .num, .kpi-card .label, .kpi-card .desc { position: relative; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.4); }
+.kpi-card .num { display: block; font-size: 30px; font-weight: 800; line-height: 1.1; color: var(--c); }
+.kpi-card .label { display: block; margin-top: 6px; font-size: 16px; font-weight: 800; }
+.kpi-card .desc { display: block; margin-top: 4px; font-size: 13px; color: #cbd5e1; }
+
+/* PANELS */
+.panel { display: none; }
+.panel.active { display: block; }
+.panel-card { padding: clamp(22px, 3.5vw, 36px); background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 4px 15px rgba(15,23,42,.03); }
+.panel h2 { font-size: clamp(22px, 3vw, 30px); letter-spacing: -.6px; margin-bottom: 10px; }
+.panel h3 { font-size: 20px; margin: 30px 0 12px; color: var(--text); letter-spacing: -0.5px;}
+.panel p { color: #334155; font-size: 15px; max-width: 800px; margin-bottom: 16px; }
+.panel ul { margin-left: 20px; margin-bottom: 15px; color: #334155; font-size: 15px; max-width: 740px; }
+.panel li { margin-bottom: 8px; }
+.lead { font-size: 16.5px !important; color: var(--text) !important; }
+
+/* Content Images Grid */
+.img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 25px 0; }
+.content-img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+/* Summary Box */
+.summary-box { background: linear-gradient(to right, rgba(124,58,237,.05), rgba(2,132,199,.05)); border-left: 4px solid var(--purple); padding: 20px 24px; border-radius: 8px; margin: 30px 0; max-width: 800px; }
+.summary-box h4 { margin: 0 0 10px 0; font-size: 17px; color: var(--text); }
+.summary-box p { margin: 0; font-size: 14.5px; color: #334155; }
+
+/* Reading form */
+.form-card { max-width: 750px; margin: 18px auto 0; padding: 28px; background: #fffdf8; border: 1.5px solid #d4af37; border-radius: 18px; }
+form { display: grid; gap: 16px; }
+label { display: block; font-weight: bold; font-size: 13px; color: #073b18; margin-bottom: 6px; }
+input, select { width: 100%; padding: 10px; border: 1.5px solid #d0c495; border-radius: 6px; font-size: 13px; font-family: inherit; background: #fff; }
+.row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.row-dob { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 10px; }
+.row-time { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.submit { width: 100%; margin-top: 10px; padding: 12px; font-size: 14px; background: linear-gradient(135deg, #0a5223, #053315); color: #fff1b8; border: 1px solid #d4af37; border-radius: 10px; font-weight: 700; cursor: pointer; font-family: inherit; }
+.submit:hover { transform: translateY(-2px); }
+.submit:disabled { opacity: .6; cursor: wait; transform: none; }
+.msg { display: none; margin-top: 14px; padding: 12px 14px; border-radius: 8px; font-size: 14px; }
+.msg.ok { display: block; background: rgba(16,185,129,.1); color: #047857; border: 1px solid rgba(16,185,129,.4); }
+.msg.err { display: block; background: rgba(225,29,72,.08); color: #be123c; border: 1px solid rgba(225,29,72,.35); }
+
+footer { padding: 25px 0; color: #64748b; font-size: 12px; border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+@media (max-width: 900px) {
+    .kpi-tabs { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+    .wrap { width: calc(100% - 24px); }
+    nav { min-height: 64px; }
+    .brand { font-size: 13px; }
+    .brand small { display: none; }
+    main { padding: 38px 0 50px; }
+    .form-card { padding: 20px; }
+    .row-2, .row-dob, .row-time { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">VR</span>
+            <span>
+                Vidyalakshmi Raghuraman
+                <small>QA LEADERSHIP · AI QUALITY · ANALYTICS</small>
+            </span>
+        </a>
+        <a class="btn" href="index.html">← Back to Portfolio</a>
+    </nav>
+</header>
+
+<main>
+<div class="wrap">
+    <p class="kicker">VIDHU ASTRO PREDICTION</p>
+    <h1 class="page-title">Astrology, explained by someone who also tests software.</h1>
+    <p class="page-intro">Choose a card to read my story, learn the basics, or request your own personalized report.</p>
+
+    <!-- THREE KPI CARDS -->
+    <div class="kpi-tabs" role="tablist" aria-label="Astro sections">
+        <button class="kpi-card" role="tab" id="tab-journey" aria-controls="journey" aria-selected="true" data-panel="journey">
+            <span class="num">Journey</span>
+            <span class="label">Bridging Code & Cosmos</span>
+            <span class="desc">Generational wisdom meets software QA</span>
+        </button>
+        <button class="kpi-card" role="tab" id="tab-general" aria-controls="general" aria-selected="false" data-panel="general">
+            <span class="num">Science</span>
+            <span class="label">Your Cosmic Blueprint</span>
+            <span class="desc">The 12 Rasis, 27 Nakshatras & 9 Grahas</span>
+        </button>
+        <button class="kpi-card" role="tab" id="tab-reading" aria-controls="reading" aria-selected="false" data-panel="reading">
+            <span class="num">Your chart</span>
+            <span class="label">Astro Reading</span>
+            <span class="desc">Share your birth details and get a report</span>
+        </button>
+    </div>
+
+    <!-- PANEL 1: MY JOURNEY -->
+    <section class="panel active" id="journey" role="tabpanel" aria-labelledby="tab-journey">
+        <div class="panel-card">
+            <h2>Bridging Code and the Cosmos</h2>
+            <p class="lead">From a young age, I was mesmerized by the stars. I spent my childhood immersed in astrology books, driven by a deep curiosity about the future and a desire to understand my own life's journey. Astrology runs in my blood—both my grandfather and my father's elder brother (Periyappa) were skilled astrologers, and I am proud to carry this generational wisdom forward.</p>
+            <p>Today, I wear two hats: I am a Senior IT Quality Assurance professional by day, and a passionate astrologer by heart. Many people view astrology with skepticism, dismissing it as mere guesswork. However, I see the profound science behind it. Just as code dictates how software behaves, planetary positions shape our unique traits and paths. I am a living example of my chart—a perfect blend of technical logic and cosmic intuition. I built this app to merge my technological expertise with my astrological heritage, hoping to reveal the real, mathematical connection between the universe and our lives.</p>
+            
+            <a class="btn" href="#reading" data-panel="reading" style="margin-top: 15px;">Request your reading →</a>
+        </div>
+    </section>
+
+    <!-- PANEL 2: GENERAL ASTROLOGY -->
+    <section class="panel" id="general" role="tabpanel" aria-labelledby="tab-general">
+        <div class="panel-card">
+            <h2>Your Cosmic Blueprint</h2>
+            <p class="lead">Vedic astrology is an ancient, precise science rooted in astronomical realities, far beyond simple daily horoscopes. At its core, the universe is mapped into 12 distinct Zodiac signs (Rasis) and 27 lunar constellations (Nakshatras). When combined with the movements of the 9 celestial bodies (Navagrahas), these elements interact to create a unique mathematical blueprint for every individual. It is a highly structured framework that helps us decode our personality, our karma, and the timeline of our lives. By understanding the placement of these 27 stars and planetary transits, we can navigate our lives with better clarity and purpose.</p>
+            
+            <h3>The Mathematics of Timing</h3>
+            <p>In the world of Software Quality Assurance, we rely on logs, timestamps, and state tracking to understand system behavior. Astrology operates on a strikingly similar principle. The birth chart (Kundli) is a timestamped log of the solar system at your exact birth moment. Key mechanisms include:</p>
+            <ul>
+                <li><strong>Lagna (Ascendant):</strong> The exact zodiac degree rising on the eastern horizon. It shifts roughly every two hours, acting as the anchor point of the entire chart.</li>
+                <li><strong>Drishti (Aspects):</strong> Planets do not just sit in isolation; they cast "glances" or geometric angles on other houses, creating complex intersecting logic—much like APIs communicating across a network.</li>
+                <li><strong>Yogas:</strong> Specific planetary permutations that yield predictable results, acting as conditional statements (IF Planet X is in House Y AND ruling Z, THEN...).</li>
+                <li><strong>Vimshottari Dasha:</strong> A 120-year timeline algorithm based on the Moon's exact degree in its Nakshatra, plotting when specific karmic chapters will execute.</li>
+            </ul>
+
+            <div class="summary-box">
+                <h4>Summary: A QA Framework for Life</h4>
+                <p>Just as we run regression tests to anticipate software failures before they reach production, reading a birth chart allows us to anticipate periods of friction, opportunity, and growth. It is not about fatalism; it is about having the cosmic documentation needed to optimize your life's roadmap and make informed, data-driven decisions.</p>
+            </div>
+
+            <!-- Neatly arranged image grid so images don't look broken or cluttered -->
+            <div class="img-grid">
+                <img class="content-img" src="image_24a63a.png" alt="Vedic Zodiac Wheel Mapping">
+                <img class="content-img" src="image_24319d.png" alt="Rasi and Nakshatra Divisions">
+                <img class="content-img" src="image_243181.png" alt="Nakshatra Degree Spans">
+                <img class="content-img" src="image_243164.png" alt="Planetary Friendships and Foes">
+            </div>
+            
+            <a class="btn" href="#reading" data-panel="reading" style="margin-top: 10px;">Get your personal reading →</a>
+        </div>
+    </section>
+
+    <!-- PANEL 3: ASTRO READING (FORM) -->
+    <section class="panel" id="reading" role="tabpanel" aria-labelledby="tab-reading">
+        <div class="panel-card">
+            <h2>Request Your Personalized Astrological Report</h2>
+            <p>Enter your birth details and contact information below. Once submitted, your request goes directly to my inbox, and I will generate and email your detailed forecast report.</p>
+
+            <div class="form-card">
+                <form id="astroForm" action="https://formspree.io/f/mrppazqg" method="POST">
+                    <div>
+                        <label for="fullName">Name / பெயர்:</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter Full Name">
+                    </div>
+
+                    <div class="row-2">
+                        <div>
+                            <label for="email">Email ID / மின்னஞ்சல்:</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number / தொலைபேசி எண்:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="dobDay">Date of Birth / பிறந்த தேதி:</label>
+                        <div class="row-dob">
+                            <input type="number" id="dobDay" name="dobDay" min="1" max="31" placeholder="DD" required>
+                            <select name="dobMonth" aria-label="Birth month">
+                                <option>January</option><option>February</option><option>March</option>
+                                <option>April</option><option>May</option><option>June</option>
+                                <option>July</option><option>August</option><option>September</option>
+                                <option>October</option><option>November</option><option selected>December</option>
+                            </select>
+                            <input type="number" name="dobYear" min="1900" max="2026" placeholder="YYYY" required aria-label="Birth year">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="birthHour">Birth Time / பிறந்த நேரம்:</label>
+                        <div class="row-time">
+                            <input type="number" id="birthHour" name="birthHour" min="1" max="12" placeholder="Hour (1-12)" required>
+                            <input type="number" name="birthMinute" min="0" max="59" placeholder="Minute (0-59)" required aria-label="Birth minute">
+                            <select name="birthAmPm" aria-label="AM or PM">
+                                <option value="AM">AM</option>
+                                <option value="PM" selected>PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="birthPlace">Birth Place / பிறந்த இடம்:</label>
+                        <input type="text" id="birthPlace" name="birthPlace" required placeholder="City, State, Country (e.g. Chennai, Tamil Nadu)">
+                    </div>
+
+                    <button type="submit" class="submit" id="submitBtn">🔮 Send My Details</button>
+                    <div id="formMsg" class="msg" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <span>© 2026 Vidyalakshmi Raghuraman</span>
+        <span>Senior QA Consultant · Executive MBA in Business Analytics</span>
+    </div>
+</footer>
+
+<script>
+(function () {
+    /* ---------- Tabs ---------- */
+    var tabs = document.querySelectorAll(".kpi-card");
+    var panels = document.querySelectorAll(".panel");
+    var ids = ["journey", "general", "reading"];
+
+    function show(id, scroll) {
+        if (ids.indexOf(id) === -1) { id = "journey"; }
+        tabs.forEach(function (t) { t.setAttribute("aria-selected", String(t.dataset.panel === id)); });
+        panels.forEach(function (p) { p.classList.toggle("active", p.id === id); });
+        if (history.replaceState) { history.replaceState(null, "", "#" + id); }
+        if (scroll) {
+            var tabsEl = document.querySelector(".kpi-tabs");
+            window.scrollTo({ top: tabsEl.getBoundingClientRect().bottom + window.scrollY - 80, behavior: "smooth" });
+        }
+    }
+    
+    document.querySelectorAll("[data-panel]").forEach(function (el) {
+        el.addEventListener("click", function (e) { 
+            e.preventDefault(); 
+            show(el.dataset.panel, true); 
+        });
+    });
+    
+    window.addEventListener("hashchange", function () { 
+        show(location.hash.slice(1), false); 
+    });
+    show(location.hash.slice(1), false);
+
+    /* ---------- Form ---------- */
+    var form = document.getElementById("astroForm");
+    var btn = document.getElementById("submitBtn");
+    var msg = document.getElementById("formMsg");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        btn.disabled = true;
+        msg.className = "msg";
+        msg.textContent = "";
+        fetch(form.action, { method: "POST", body: new FormData(form), headers: { "Accept": "application/json" } })
+            .then(function (res) {
+                if (!res.ok) { throw new Error("failed"); }
+                form.reset();
+                msg.className = "msg ok";
+                msg.textContent = "Thank you! Your details were sent. I will email your report soon.";
+            })
+            .catch(function () {
+                msg.className = "msg err";
+                msg.textContent = "Something went wrong. Please try again, or email vidhusjack999@gmail.com directly.";
+            })
+            .then(function () { btn.disabled = false; });
+    });
+})();
+</script>
+
+</body>
+</html>
