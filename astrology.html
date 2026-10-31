@@ -73,9 +73,9 @@ main { padding: 55px 0 70px; }
     color: #ffffff;
     overflow: hidden;
 }
-.kpi-card:nth-child(1) { --c: var(--gold);   background-image: url('bg_journey.jpg'), linear-gradient(135deg, #3d2c0f, #141b3a); }
-.kpi-card:nth-child(2) { --c: var(--violet); background-image: url('bg_science.jpg'), linear-gradient(135deg, #2c2461, #141b3a); }
-.kpi-card:nth-child(3) { --c: var(--teal);   background-image: url('bg_chart.jpg'),   linear-gradient(135deg, #0f3a3a, #141b3a); }
+.kpi-card:nth-child(1) { --c: var(--gold);   background-image: linear-gradient(135deg, #3d2c0f, #141b3a); }
+.kpi-card:nth-child(2) { --c: var(--violet); background-image: linear-gradient(135deg, #2c2461, #141b3a); }
+.kpi-card:nth-child(3) { --c: var(--teal);   background-image: linear-gradient(135deg, #0f3a3a, #141b3a); }
 
 /* Dark overlay so text stays readable over photos */
 .kpi-card::before { content: ''; position: absolute; inset: 0; background: rgba(8, 11, 28, .72); z-index: 1; transition: background .3s ease; }
