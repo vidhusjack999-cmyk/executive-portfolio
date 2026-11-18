@@ -942,150 +942,185 @@ footer .wrap {
 <section class="content-section" id="piggysweep">
     <div class="wrap">
         <div class="section-head">
-            <p class="kicker">FINTECH PRODUCT • AI AGENT • PWA</p>
-            <h2 class="section-title">
-                PiggySweep: Personal Finance Planning Platform
-            </h2>
+            <p class="kicker">FINTECH PRODUCT • PWA • FIREBASE AUTHENTICATION</p>
+            <h2 class="section-title">PiggySweep: Goal-Based Personal Finance Planning</h2>
             <p class="section-intro">
-                A mobile-first Progressive Web Application (PWA) designed to help users
-                plan financial goals, track expenses, monitor investments, and improve
-                financial habits through analytics and an AI-powered financial assistant.
+                A mobile-first personal finance Progressive Web App designed to bring income,
+                expenses, savings, investments and financial goals into one clear planning
+                experience. Built with a local-first data approach and Firebase Authentication.
             </p>
         </div>
+
         <article class="project-card">
             <div>
                 <p class="kicker" style="color:var(--cyan)">
                     FOUNDER • TECHNICAL PRODUCT OWNER • QUALITY ENGINEER
                 </p>
-                <h3>
-                    Goal Planning, Budgeting, Investments & Piggy AI
-                </h3>
+                <h3>Plan goals. Understand spending. Stay in control.</h3>
                 <p>
-                    Designed and developed PiggySweep as an offline-capable personal
-                    finance platform featuring goal-based savings planning, expense
-                    categorization, investment tracking, spending analytics, financial
-                    health scoring, and a conversational AI assistant.
+                    Conceptualized and developed PiggySweep as a responsive PWA with a five-step
+                    financial onboarding journey, My Money dashboard, expense and budget tracking,
+                    savings-goal planning, investment monitoring and financial-health indicators.
+                    A deterministic JavaScript calculation layer powers numerical outputs and
+                    goal-funding scenarios.
+                </p>
+                <p style="margin-top:10px">
+                    Firebase Authentication provides email/password sign-up and login. Financial
+                    records remain in browser Local Storage under account-specific keys linked to
+                    the authenticated Firebase UID. JSON export and import support manual backup
+                    and restoration; financial records are not stored in Firestore.
                 </p>
                 <div class="pills">
-                    <span>JavaScript</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>PWA</span>
-                    <span>Service Workers</span>
-                    <span>Local Storage</span>
-                    <span>FinTech</span>
-                    <span>Business Analytics</span>
-                    <span>AI Agent Design</span>
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                    <span>PWA</span><span>Web Manifest</span><span>Service Workers</span>
+                    <span>Local Storage</span><span>Firebase Authentication</span>
+                    <span>UID-Based Data Separation</span><span>JSON Backup/Restore</span>
+                    <span>Financial Business Rules</span><span>Quality Engineering</span>
                 </div>
                 <div class="hero-actions">
                     <a class="btn primary"
                        href="https://github.com/vidhusjack999-cmyk/PiggySweep"
-                       target="_blank" rel="noopener noreferrer">
-                        Source Code ↗
-                    </a>
+                       target="_blank" rel="noopener noreferrer">Source Code ↗</a>
                     <a class="btn secondary"
                        href="https://vidhusjack999-cmyk.github.io/PiggySweep/"
-                       target="_blank" rel="noopener noreferrer">
-                        Live Demo ↗
-                    </a>
+                       target="_blank" rel="noopener noreferrer">Live PWA ↗</a>
                 </div>
             </div>
             <div class="project-visual">
-                <div style="font-size:90px">
-                    🐷
-                </div>
+                <div style="font-size:90px">🐷</div>
             </div>
         </article>
+
         <div class="cards" style="margin-top:18px">
             <article class="card">
                 <div class="card-icon">📊</div>
                 <h3>My Money Dashboard</h3>
-                <p>
-                    Income allocation, goal simulations, spending analytics,
-                    investment monitoring, and financial wellness insights.
-                </p>
+                <p>Consolidated view of income, expenses, savings, investments, goal progress and financial-health indicators.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">🧮</div>
+                <h3>Deterministic Financial Engine</h3>
+                <p>JavaScript business rules for available-balance calculations, savings analysis, goal-funding requirements, budget allocation and spending insights.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">🔐</div>
+                <h3>Firebase Authentication</h3>
+                <p>Email/password registration and login, with Firebase UID-linked local storage keys to keep each account's financial records logically separate.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">💾</div>
+                <h3>Local Data &amp; Backup</h3>
+                <p>Financial records stay in browser Local Storage. JSON export and import support manual backup and restoration without a Firestore financial-data store.</p>
             </article>
             <article class="card">
                 <div class="card-icon">🤖</div>
-                <h3>Piggy AI Agent</h3>
-                <p>
-                    Rule-based conversational financial assistant providing
-                    budgeting guidance, spending alerts, goal tracking,
-                    and savings recommendations.
-                </p>
+                <h3>Piggy AI Concept</h3>
+                <p>A rule-based conversational assistant concept for budgeting insights, spending alerts, goal progress and financial education. Advanced AI coaching requires future secure backend integration.</p>
             </article>
             <article class="card">
                 <div class="card-icon">📱</div>
-                <h3>PWA Experience</h3>
-                <p>
-                    Offline-first architecture using Service Workers and Local
-                    Storage with installation support across mobile and desktop devices.
-                </p>
+                <h3>Progressive Web App</h3>
+                <p>Responsive, installable web experience using a Web Manifest and Service Worker. Offline behavior depends on the configured cache and should be validated on target devices.</p>
             </article>
         </div>
 
-        <!-- COMPETITIVE ADVANTAGE / DIFFERENTIATORS -->
-        <div class="cards" style="margin-top: 30px; border-top: 1px solid var(--line); padding-top: 30px;">
-            <div style="grid-column: 1 / -1; margin-bottom: 10px;">
-                <h3 style="font-size: 20px; color: #0f172a;">How PiggySweep Stands Out</h3>
-                <p class="mut">Moving beyond reactive expense logging to proactive wealth management.</p>
+        <!-- DELIVERY PHASES -->
+        <div style="margin-top:30px">
+            <div class="section-head" style="margin-bottom:18px">
+                <p class="kicker">PRODUCT DELIVERY ROADMAP</p>
+                <h3 style="font-size:22px;color:#0f172a">From PWA foundation to mobile app publishing</h3>
+                <p class="section-intro">A phased delivery approach: validate the product and data workflows first, then package and release the mobile application.</p>
             </div>
-            
+            <div class="timeline">
+                <article class="exp-row">
+                    <div>
+                        <div class="exp-date">PHASE 1</div>
+                        <div class="exp-company">COMPLETED</div>
+                    </div>
+                    <div>
+                        <h3>PWA Product Foundation</h3>
+                        <p>Defined the product vision and user journey; built the responsive interface, five-step onboarding, My Money dashboard, financial modules and deterministic calculation workflows using HTML, CSS and JavaScript.</p>
+                        <div class="tech-pills"><span>Product Discovery</span><span>HTML/CSS/JavaScript</span><span>Financial Logic</span><span>Responsive PWA</span></div>
+                    </div>
+                </article>
+                <article class="exp-row">
+                    <div>
+                        <div class="exp-date">PHASE 2</div>
+                        <div class="exp-company">IMPLEMENTED &amp; TESTED</div>
+                    </div>
+                    <div>
+                        <h3>Authentication, Local Data &amp; Backup</h3>
+                        <p>Integrated Firebase Authentication for email/password registration, login and logout. Implemented Firebase UID-based Local Storage separation, JSON export/import, profile display and Settings access. Validated persistence, backup/restore and data isolation across separate test accounts.</p>
+                        <div class="tech-pills"><span>Firebase Authentication</span><span>UID-Based Storage</span><span>Local Storage</span><span>JSON Backup/Restore</span><span>Account Isolation Testing</span></div>
+                    </div>
+                </article>
+                <article class="exp-row">
+                    <div>
+                        <div class="exp-date">PHASE 3</div>
+                        <div class="exp-company">NEXT • PLANNED</div>
+                    </div>
+                    <div>
+                        <h3>Android App Preparation</h3>
+                        <p>Plan to package the existing web application using Capacitor, configure the Android project, and validate navigation, authentication, local persistence, device behavior and backup/restore on physical devices.</p>
+                        <div class="tech-pills"><span>Capacitor</span><span>Android Studio</span><span>Device Testing</span></div>
+                    </div>
+                </article>
+                <article class="exp-row">
+                    <div>
+                        <div class="exp-date">PHASE 4</div>
+                        <div class="exp-company">FUTURE • PLANNED</div>
+                    </div>
+                    <div>
+                        <h3>Release Readiness &amp; Mobile Publishing</h3>
+                        <p>Prepare the Android release build, app listing assets, privacy disclosures, signing and release checks, then publish through Google Play Console after testing and policy review. Publishing has not yet been completed.</p>
+                        <div class="tech-pills"><span>Release Build</span><span>Google Play Console</span><span>Privacy &amp; Policy Review</span></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- PRODUCT PRINCIPLES -->
+        <div class="cards" style="margin-top:30px;border-top:1px solid var(--line);padding-top:30px">
+            <div style="grid-column:1/-1;margin-bottom:10px">
+                <h3 style="font-size:20px;color:#0f172a">Product Principles &amp; Quality Approach</h3>
+                <p class="section-intro">Transparent calculations, user control, local-first data handling and quality validation.</p>
+            </div>
             <article class="card">
                 <div class="card-icon">🧠</div>
-                <h3 style="font-size: 16px;">AI Coaching, Not Just Logging</h3>
-                <p style="font-size: 13.5px;">Most trackers only categorize past transactions. PiggySweep uses a deterministic AI agent to provide forward-looking advice, SIP education, and proactive budget alerts based on live data.</p>
+                <h3>Explainable Financial Insights</h3>
+                <p>Use deterministic calculations for numerical results. Present the impact of spending choices on savings and goals, while keeping financial decisions with the user.</p>
             </article>
-            
             <article class="card">
                 <div class="card-icon">🔒</div>
-                <h3 style="font-size: 16px;">Zero-Trust Privacy Model</h3>
-                <p style="font-size: 13.5px;">Unlike mainstream apps that require bank credential scraping and cloud syncing, PiggySweep is an offline-capable PWA utilizing Local Storage. Your financial data never leaves your device.</p>
+                <h3>Local-First Data Design</h3>
+                <p>Firebase manages authentication; personal financial records are stored locally per authenticated account. Local Storage is not encrypted by default, so device security and protected backups remain important.</p>
             </article>
-            
             <article class="card">
-                <div class="card-icon">🎯</div>
-                <h3 style="font-size: 16px;">Holistic Wealth vs. Simple Budgets</h3>
-                <p style="font-size: 13.5px;">Instead of just tracking grocery bills, the platform calculates exact mathematical requirements for life goals and tracks multi-asset investment portfolios alongside daily spending.</p>
+                <div class="card-icon">🧪</div>
+                <h3>Quality Engineering</h3>
+                <p>Validated onboarding, financial business rules, negative and boundary cases, login/logout, persistence, account isolation, JSON restoration and end-to-end workflows.</p>
             </article>
         </div>
 
         <!-- Demo Video Container -->
-        <div style="
-            margin-top:25px;
-            background:#ffffff;
-            border:1px solid var(--line);
-            border-radius:18px;
-            padding:24px;
-        ">
-            <h3 style="margin-bottom:12px">
-                PiggySweep Product Walkthrough
-            </h3>
+        <div style="margin-top:25px;background:#ffffff;border:1px solid var(--line);border-radius:18px;padding:24px">
+            <h3 style="margin-bottom:12px">PiggySweep Product Walkthrough</h3>
             <p style="margin-bottom:16px;color:var(--muted)">
-                Demonstrates onboarding, goal planning, spending analytics,
-                investment tracking, Piggy AI, and financial health scoring.
+                Demonstrates the current PWA experience, onboarding, financial dashboard, goal planning,
+                local data handling and authentication workflow.
             </p>
-            <video
-                controls
-                preload="auto"
-                playsinline
-                style="
-                    width:100%;
-                    border-radius:12px;
-                    border:1px solid var(--line);
-                    background:#0f172a;
-                ">
+            <video controls preload="metadata" playsinline
+                   style="width:100%;border-radius:12px;border:1px solid var(--line);background:#0f172a">
                 <source src="piggysweep-demo.mp4" type="video/mp4">
             </video>
-            
-            <!-- Voice-Over Script Notes -->
-            <div style="margin-top: 16px; padding: 16px; background: #f8fafc; border: 1px solid var(--line); border-radius: 12px; font-size: 13.5px; color: var(--muted); line-height: 1.6;">
-                <strong style="color: var(--cyan); display: block; margin-bottom: 8px;">▶ Demo Voice-Over Overview</strong>
-                <em>"Welcome to PiggySweep, a privacy-first, AI-powered personal finance platform built for the modern web. In this walkthrough, we demonstrate the 'My Money' dashboard featuring dynamic income allocation, goal-based tracking, and investment portfolios. Piggy AI—our deterministic, rule-based conversational agent—analyzes your local financial data to provide personalized budgeting insights, goal funding guidance, and proactive spending alerts acting as a dedicated financial coach right in your pocket. Because it's an offline-capable PWA, your data stays locally on your device, completely private and secure."</em>
+            <div style="margin-top:16px;padding:16px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--muted);line-height:1.6">
+                <strong style="color:var(--cyan);display:block;margin-bottom:8px">▶ Demo Overview</strong>
+                <em>"Welcome to PiggySweep, a goal-based personal finance planning PWA. This walkthrough introduces the financial onboarding journey and My Money dashboard, including income, expenses, savings goals and investment tracking. Firebase Authentication manages account access, while financial records are stored locally using account-specific storage and can be backed up or restored through JSON files. The current release is a PWA; Android packaging with Capacitor and Google Play publishing are planned next steps."</em>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- MBA DISSERTATION & RESEARCH -->
 <section class="content-section" id="dissertation">
