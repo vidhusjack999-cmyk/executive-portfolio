@@ -23,7 +23,7 @@
       "@type": "Person",
       "name": "Vidyalakshmi Raghuraman",
       "alternateName": ["Vidya Lakshmi Raghuraman", "Vidhu"],
-      "jobTitle": "Senior QA Consultant & Technical Product Owner",
+      "jobTitle": "Senior QA Consultant",
       "description": "Senior Software Quality Assurance Lead and Technical Business Analyst specializing in enterprise digital transformation, AI governance, PWA architecture, and predictive analytics.",
       "url": "https://vidhusjack999-cmyk.github.io/executive-portfolio/",
       "sameAs": [
@@ -780,6 +780,44 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; }
 }
+
+/* Portfolio responsive refinements */
+@media (max-width:1350px) {
+  .brand small { display:none; }
+  .nav-links { gap:12px; font-size:12.5px; }
+  .nav-links .btn { padding:9px 13px; font-size:12px; }
+}
+@media (min-width:651px) and (max-width:900px) {
+  .cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:900px) {
+  nav { flex-wrap:wrap; padding:8px 0; gap:8px; }
+  .nav-links { width:100%; overflow-x:auto; white-space:nowrap; gap:14px; padding:2px 0 8px; scrollbar-width:thin; }
+  .nav-links a { flex:0 0 auto; }
+}
+@media (max-width:650px) {
+  .nav-links { display:flex; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .nav-links a:not(:last-child) { display:inline-flex; }
+  .nav-links a { flex:0 0 auto; }
+  .chart-box.tall { height:620px; }
+}
+@media (max-width:420px) {
+  .chart-box.tall { height:680px; }
+  .chart-card { padding:12px; }
+}
+
+/* Portfolio responsive navigation, tablet cards and chart readability */
+@media (max-width:1300px){ .brand small{display:none} }
+@media (min-width:651px) and (max-width:900px){ .cards{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:1180px){
+  nav{flex-wrap:wrap;padding:6px 0}
+  .nav-links{width:100%;overflow-x:auto;white-space:nowrap;gap:14px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .nav-links a{flex:0 0 auto}
+}
+@media (max-width:650px){
+  .nav-links a:not(:last-child){display:inline-flex}
+  .chart-box.tall{height:560px}
+}
 </style>
 
 </head>
@@ -799,11 +837,11 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#expertise">Expertise</a>
-            <a href="#experience">Track Record</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">AI Projects</a>
-            <a href="#ai-development">AI Development</a>
+            <a href="#ai-development">AI Build</a>
             <a href="#piggysweep">PiggySweep</a>
-            <a href="#dissertation">MBA Analytics</a>
+            <a href="#dissertation">MBA</a>
             <a class="btn primary" href="astrology.html" style="padding: 8px 14px; font-size: 13px;">🔮 Get Astro Reading</a>
             <a class="btn secondary" href="#contact">Let's Connect ↗</a>
         </div>
@@ -822,10 +860,10 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 <span class="gradient-text">digital release.</span>
             </h1>
             <p class="hero-copy">
-                I'm <strong>Vidyalakshmi Raghuraman</strong> — a Senior QA Consultant with 12+ years across Banking &amp; Financial Services, Telecom, ERP, Public Safety and R&amp;D. I am building on my enterprise QA background to move toward Business Analysis and Product Ownership in Data &amp; Analytics. My experience includes analysing requirements, reviewing acceptance criteria, planning tests, and carrying out functional, system, regression, SIT/UAT, API, web, desktop and mobile testing through defect closure. I collaborate with Business Analysts, Product Owners, developers and onshore stakeholders in Agile Scrum and Kanban teams. My Executive MBA in Business Analytics &amp; Digital Transformation adds a strong analytical perspective.
+                I'm <strong>Vidyalakshmi Raghuraman</strong> — a Senior QA Consultant with 11+ years across Banking &amp; Financial Services, Telecom, ERP, Public Safety and R&amp;D. I am building on my enterprise QA background to move toward Business Analysis and Product Ownership in Data &amp; Analytics. My experience includes analysing requirements, reviewing acceptance criteria, planning tests, and carrying out functional, system, regression, SIT/UAT, API, web, desktop and mobile testing through defect closure. I collaborate with Business Analysts, Product Owners, developers and onshore stakeholders in Agile Scrum and Kanban teams. My Executive MBA in Business Analytics &amp; Digital Transformation adds a strong analytical perspective.
             </p>
             <div class="hero-actions">
-                <a class="btn primary" href="#experience">Explore Track Record ↓</a>
+                <a class="btn primary" href="#experience">Explore Experience ↓</a>
                 <a class="btn secondary" href="https://github.com/vidhusjack999-cmyk" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
             </div>
             <div class="availability">
@@ -840,7 +878,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
             <h2>Quality With Business Depth</h2>
             <p>Enterprise QA delivery across banking, telecom, ERP and public-safety systems, strengthened by business analysis, analytics research and independent product-building experience.</p>
             <div class="stat-grid">
-                <div class="stat"><strong>12+</strong><span>Years in QA &amp; Delivery</span></div>
+                <div class="stat"><strong>11+</strong><span>Years in QA &amp; Delivery</span></div>
                 <div class="stat"><strong>5+</strong><span>Enterprise Domains</span></div>
                 <div class="stat"><strong>AI QA</strong><span>GenAI workflow validation</span></div>
                 <div class="stat"><strong>KNIME</strong><span>Predictive &amp; CLV Modeling</span></div>
@@ -958,7 +996,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
     <div class="wrap">
         <div class="section-head">
             <p class="kicker">DELIVERY RECORD</p>
-            <h2 class="section-title">12+ years validating complex enterprise systems.</h2>
+            <h2 class="section-title">11+ years validating complex enterprise systems.</h2>
             <p class="section-intro">Experience across financial management, public safety, telecom billing, banking, ERP transformation and desktop/firmware products—with a consistent focus on translating requirements into testable coverage and reliable releases.</p>
         </div>
 
@@ -1074,7 +1112,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
         </div>
 
         <!-- ENTERPRISE RESILIENCE & DATA INTEGRITY SPECIFICATIONS -->
-        <div class="cards" style="margin-top: 18px; grid-template-columns: repeat(3, minmax(0, 1fr));">
+        <div class="cards" style="margin-top: 18px;">
             <article class="card">
                 <div class="card-icon">⚡</div>
                 <h3>Model Availability &amp; Fallback</h3>
@@ -1138,10 +1176,8 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
             </article>
         </div>
         <p class="section-intro" style="margin-top:16px">
-            <strong>How to describe this accurately:</strong> AI-assisted development, prompt-driven development,
-            prompt design and iterative prompt engineering, supported by product analysis and QA validation.
-            These projects demonstrate practical use of AI coding tools; they should not be presented as professional
-            software engineering employment or as building and training an AI foundation model.
+            These projects demonstrate practical AI-assisted development: translating product requirements into structured prompts,
+            reviewing generated code, troubleshooting issues and validating the resulting behaviour through QA.
         </p>
     </div>
 </section>
@@ -1242,7 +1278,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
             <article class="card">
                 <div class="card-icon">🎮</div>
                 <h3>Play Zone: Learn Through Play</h3>
-                <p>A financial-learning experience featuring Money Quiz, Coin Matching, Savings Quest and Piggy Rewards concepts. Virtual points are for in-app engagement only and have no cash value. Show each activity as available or in development according to the tested build.</p>
+                <p>The Play Zone brings financial learning into the product through Money Quiz, Coin Matching, Savings Quest and Piggy Rewards. Virtual points support in-app engagement only and have no cash value.</p>
             </article>
             <article class="card">
                 <div class="card-icon">✉️</div>
@@ -1294,7 +1330,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 <article class="card">
                     <div class="card-icon">🧠</div>
                     <h3>Make financial learning interactive</h3>
-                    <p>Play Zone concepts such as Money Quiz, Coin Matching, Savings Quest and virtual rewards add a learning and engagement dimension. Activities should be labelled live or coming soon according to the tested release.</p>
+                    <p>The Play Zone combines short money quizzes, matching puzzles, savings challenges and virtual rewards to make financial learning more engaging. Virtual points have no cash value.</p>
                 </article>
                 <article class="card">
                     <div class="card-icon">💬</div>
@@ -1357,7 +1393,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 <article class="card"><div class="card-icon">🎯</div><h3>Savings Quest</h3><p>A challenge-based experience designed to encourage progress towards savings habits and personal goals.</p></article>
                 <article class="card"><div class="card-icon">🏆</div><h3>Piggy Rewards</h3><p>A virtual-points and rewards concept recognizing engagement and learning milestones. Points have no monetary or cash value.</p></article>
             </div>
-            <p class="section-intro" style="margin-top:12px"><strong>Product distinction:</strong> these activities complement the finance tools; they are not gambling, real-money games or investment-return promises. Show each activity as live or coming soon based on its actual release status.</p>
+            <p class="section-intro" style="margin-top:12px"><strong>Product distinction:</strong> these activities complement the finance tools. They are learning and engagement features, not gambling, real-money games or investment-return promises.</p>
         </div>
 
         <!-- WRITE TO US -->
@@ -1371,7 +1407,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 <div>
                     <h3>From user feedback to product improvement</h3>
                     <p>The Write to Us form supports four feedback types: bug report, improvement, new feature and general feedback. Users provide a subject, description and reply email. The form can generate a reference number and include selected diagnostic context such as app version, platform, device/browser, screen size, current screen and submission time. Passwords are not included.</p>
-                    <p style="margin-top:10px">The intended delivery integration uses Formspree: the form submits to a configured endpoint, which routes feedback to a support inbox. Until the PiggySweep endpoint is configured and real delivery is verified, describe this as an integration in progress. The copy-draft option is a fallback and does not mean the message was delivered.</p>
+                    <p style="margin-top:10px">Write to Us is designed to route structured feedback through a dedicated Formspree endpoint to a support inbox. Endpoint configuration and end-to-end email delivery are being completed; users can copy their feedback draft while automated delivery is being validated.</p>
                     <div class="pills"><span>Bug Reporting</span><span>Feature Requests</span><span>User Feedback</span><span>Reference ID</span><span>Diagnostic Context</span><span>Formspree Integration</span></div>
                 </div>
                 <div class="project-visual"><div style="font-size:72px">✉️</div></div>
@@ -1404,7 +1440,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                     </div>
                     <div>
                         <h3>Authentication, Local Data &amp; Backup</h3>
-                        <p>Integrated Firebase Authentication for email/password registration, login and logout. Implemented Firebase UID-based Local Storage separation, JSON export/import, profile display and Settings access. Validated persistence, backup/restore and data isolation across separate test accounts.</p>
+                        <p>Integrated Firebase Authentication for email/password registration, login and logout. Implemented Firebase UID-based Local Storage separation, JSON export/import, profile display and My Profile account-management options. Validated persistence, backup/restore and data isolation across separate test accounts.</p>
                         <div class="tech-pills"><span>Firebase Authentication</span><span>UID-Based Storage</span><span>Local Storage</span><span>JSON Backup/Restore</span><span>Account Isolation Testing</span></div>
                     </div>
                 </article>
@@ -1463,13 +1499,14 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 Demonstrates the PWA experience, onboarding, financial dashboard, goals, budgets, Play Zone concepts,
                 profile and feedback workflow, local data handling and authentication. Android packaging and testing use Capacitor and Android Studio.
             </p>
-            <video controls preload="metadata" playsinline
+            <video controls preload="metadata" playsinline aria-label="PiggySweep product walkthrough video" poster="piggysweep-demo-poster.jpg"
                    style="width:100%;border-radius:12px;border:1px solid var(--line);background:#0f172a">
                 <source src="piggysweep-demo.mp4" type="video/mp4">
+                Your browser does not support the video element.
             </video>
             <div style="margin-top:16px;padding:16px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--muted);line-height:1.6">
-                <strong style="color:var(--cyan);display:block;margin-bottom:8px">▶ Demo Overview</strong>
-                <em>"Welcome to PiggySweep, a goal-based personal finance planning PWA. This walkthrough introduces the financial onboarding journey and My Money dashboard, including income, expenses, savings goals and investment tracking. Firebase Authentication manages account access, while financial records are stored locally using account-specific storage and can be backed up or restored through JSON files. The web application has been packaged with Capacitor for Android testing in Android Studio. Google Play publishing remains a separate future release step."</em>
+                <strong style="color:var(--cyan);display:block;margin-bottom:8px">▶ Demo overview</strong>
+                <p style="margin:0">A visual walkthrough of PiggySweep's onboarding, money dashboard, goals, daily expenses, budgets, investment tracking, Play Zone, profile and feedback experience. This video is presented as a visual demo and does not include voice-over narration.</p>
             </div>
         </div>
     </div>
@@ -1685,11 +1722,23 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
     var midLine = { id: "midLine", afterDraw: function (chart) {
         var x = chart.scales.x.getPixelForValue(3), a = chart.chartArea, c = chart.ctx;
         c.save(); c.setLineDash([5, 4]); c.strokeStyle = "#0f172a"; c.beginPath(); c.moveTo(x, a.top); c.lineTo(x, a.bottom); c.stroke(); c.restore(); } };
+    function wrapAxisLabel(value, maxChars) {
+        var text = String(value || "");
+        if (window.innerWidth > 420 || text.length <= maxChars) return text;
+        var words = text.split(" "), lines = [], line = "";
+        words.forEach(function (word) {
+            var candidate = line ? line + " " + word : word;
+            if (candidate.length > maxChars && line) { lines.push(line); line = word; }
+            else { line = candidate; }
+        });
+        if (line) lines.push(line);
+        return lines;
+    }
     var itemsEl = document.getElementById("chItems");
     if (itemsEl) {
         new Chart(itemsEl, { type: "bar", plugins: [midLine],
             data: { labels: items, datasets: [{ data: means, backgroundColor: means.map(function (m) { return m >= 3.25 ? C.cyan : (m >= 3 ? C.purple : C.gold); }), borderRadius: 5 }] },
-            options: { indexAxis: "y", maintainAspectRatio: false, plugins: noLegend, scales: { x: { min: 1, max: 5, grid: { color: "#e2e8f0" } }, y: { grid: { display: false } } } } });
+            options: { indexAxis: "y", maintainAspectRatio: false, plugins: noLegend, scales: { x: { min: 1, max: 5, grid: { color: "#e2e8f0" } }, y: { grid: { display: false }, ticks: { font: { size: window.innerWidth <= 420 ? 9 : 11 }, callback: function (value) { return wrapAxisLabel(this.getLabelForValue(value), 15); } } } } } });
     }
 
     /* Regression figures reported in the dissertation */
@@ -1736,7 +1785,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
         var af = ["Location", "Time pattern", "Frequency", "Season", "Channel", "Campaign type", "Language", "Duration", "Company", "Target audience", "Customer segment"];
         var ap = [0.0583, 0.067, 0.0934, 0.0957, 0.1711, 0.3969, 0.5212, 0.5951, 0.695, 0.9395, 0.9926];
         new Chart(anovaEl, { type: "bar", plugins: [refLine("p05", 0.05)], data: { labels: af, datasets: [{ data: ap, backgroundColor: ap.map(function (v) { return v < 0.1 ? C.gold : C.cyan; }), borderRadius: 5 }] },
-            options: { indexAxis: "y", maintainAspectRatio: false, plugins: noLegend, scales: { x: { min: 0, max: 1, grid: { color: "#e2e8f0" }, title: { display: true, text: "p-value" } }, y: { grid: { display: false } } } } });
+            options: { indexAxis: "y", maintainAspectRatio: false, plugins: noLegend, scales: { x: { min: 0, max: 1, grid: { color: "#e2e8f0" }, title: { display: true, text: "p-value" } }, y: { grid: { display: false }, ticks: { font: { size: window.innerWidth <= 420 ? 9 : 11 }, callback: function (value) { return wrapAxisLabel(this.getLabelForValue(value), 12); } } } } } });
     }
     var tEl = document.getElementById("chTval");
     if (tEl) {
