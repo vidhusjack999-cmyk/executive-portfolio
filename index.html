@@ -1153,9 +1153,10 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
             <p class="kicker">FINTECH PRODUCT • PWA • FIREBASE AUTHENTICATION</p>
             <h2 class="section-title">PiggySweep: Goal-Based Personal Finance Planning</h2>
             <p class="section-intro">
-                A mobile-first personal finance Progressive Web App designed to bring income,
-                expenses, savings, investments and financial goals into one clear planning
-                experience. Built with a local-first data approach and Firebase Authentication.
+                A mobile-first personal finance product combining income and expense tracking, budgets,
+                savings goals, investment monitoring, financial learning and playful engagement.
+                Built first with HTML/CSS/JavaScript, evolved into a PWA and packaged with Capacitor
+                for Android testing.
             </p>
         </div>
 
@@ -1168,7 +1169,8 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 <p>
                     Defined the product concept, user journey and functional scope for PiggySweep, a responsive PWA with a five-step
                     financial onboarding journey, My Money dashboard, expense and budget tracking,
-                    savings-goal planning, investment monitoring and financial-health indicators.
+                    savings-goal planning, investment monitoring, financial-health indicators, a Play Zone with
+                    money quizzes and game-based challenges, and a Support &amp; Feedback experience with Write to Us.
                     Worked across Technical Product Owner and Business Analyst responsibilities by shaping
                     features, outlining user workflows, clarifying business rules and translating product needs
                     into functional behaviour. Used structured natural-language prompts and iterative instructions
@@ -1188,7 +1190,9 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                     <span>PWA</span><span>Web Manifest</span><span>Service Workers</span>
                     <span>Local Storage</span><span>Firebase Authentication</span>
                     <span>UID-Based Data Separation</span><span>JSON Backup/Restore</span>
-                    <span>Financial Business Rules</span><span>AI-Prompt-Assisted Development</span><span>Quality Engineering</span>
+                    <span>Financial Business Rules</span><span>Play Zone &amp; Money Quizzes</span>
+                    <span>Write to Us Feedback</span><span>Capacitor</span><span>Android Studio</span>
+                    <span>AI-Prompt-Assisted Development</span><span>Quality Engineering</span>
                 </div>
                 <div class="hero-actions">
                     <a class="btn primary"
@@ -1235,6 +1239,87 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 <h3>Progressive Web App</h3>
                 <p>Responsive, installable web experience using a Web Manifest and Service Worker. Offline behavior depends on the configured cache and should be validated on target devices.</p>
             </article>
+            <article class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Play Zone: Learn Through Play</h3>
+                <p>A financial-learning experience featuring Money Quiz, Coin Matching, Savings Quest and Piggy Rewards concepts. Virtual points are for in-app engagement only and have no cash value. Show each activity as available or in development according to the tested build.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">✉️</div>
+                <h3>Write to Us: Support &amp; Feedback</h3>
+                <p>A structured form for bug reports, improvements, feature requests and general feedback. It captures a subject, description and reply email, with a reference number and selected app diagnostics. Formspree delivery is pending endpoint configuration and end-to-end verification; copy-draft is the fallback.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">📲</div>
+                <h3>Capacitor Android Testing</h3>
+                <p>The existing web application is packaged with Capacitor and opened in Android Studio for Android build and mobile behaviour testing. This reuses the web code; it is not a separate Flutter rewrite or a published Play Store app.</p>
+            </article>
+        </div>
+
+
+        <!-- PIGGYSWEEP ARCHITECTURE -->
+        <div style="margin-top:30px">
+            <div class="section-head" style="margin-bottom:18px">
+                <p class="kicker">SOLUTION ARCHITECTURE</p>
+                <h3 style="font-size:22px;color:#0f172a">How PiggySweep was built</h3>
+                <p class="section-intro">A web-first, local-first architecture that evolved into an installable PWA and an Android package for mobile testing.</p>
+            </div>
+            <div class="cards">
+                <article class="card"><div class="card-icon">🖥️</div><h3>1. User Interface</h3><p>HTML5 structures screens, CSS3 handles responsive styling and JavaScript manages navigation, forms and interactions.</p><div class="tech-pills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div></article>
+                <article class="card"><div class="card-icon">🧮</div><h3>2. Business Logic</h3><p>Deterministic JavaScript rules calculate budgets, available balance, spending summaries, savings requirements and goal progress.</p><div class="tech-pills"><span>Validation</span><span>Calculations</span></div></article>
+                <article class="card"><div class="card-icon">🔐</div><h3>3. Authentication</h3><p>Firebase Authentication handles email/password sign-up, login and identity. The authenticated UID selects the account-specific local data key.</p><div class="tech-pills"><span>Firebase Auth</span><span>UID</span></div></article>
+                <article class="card"><div class="card-icon">💾</div><h3>4. Data &amp; Recovery</h3><p>Financial records are stored in browser/device Local Storage. JSON export/import provides manual backup and restore; no Firestore financial-data store or automatic cross-device sync is implemented.</p><div class="tech-pills"><span>Local Storage</span><span>JSON</span></div></article>
+                <article class="card"><div class="card-icon">🌐</div><h3>5. PWA Layer</h3><p>PWA configuration provides an installable, app-like browser experience. Offline support depends on service-worker caching and must be verified on target devices.</p><div class="tech-pills"><span>Web Manifest</span><span>Service Worker</span></div></article>
+                <article class="card"><div class="card-icon">📱</div><h3>6. Android Container</h3><p>Capacitor wraps the existing web application for Android. Android Studio is used to open, build, run and test the Android project.</p><div class="tech-pills"><span>Capacitor</span><span>Android Studio</span></div></article>
+            </div>
+            <div style="margin-top:16px;padding:20px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(120deg,#eef4ff,#f3edff)">
+                <h4 style="color:#24305e;margin-bottom:10px">Architecture flow</h4>
+                <p style="font-size:14px;color:#334155;line-height:1.9;text-align:center">
+                    <strong>Browser / Mobile User</strong> → <strong>HTML + CSS + JavaScript UI</strong> →
+                    <strong>Business Rules &amp; Calculations</strong> →
+                    <strong>Firebase Authentication</strong> (identity) +
+                    <strong>UID-specific Local Storage</strong> (financial data) →
+                    <strong>JSON Backup / Restore</strong>
+                </p>
+                <p style="font-size:13px;color:#536176;text-align:center;margin-top:8px">
+                    Mobile route: PWA web assets → Capacitor Android container → Android Studio build and device testing.
+                    Feedback route: Write to Us form → configured Formspree endpoint → support inbox (configuration and delivery test pending).
+                </p>
+            </div>
+        </div>
+
+        <!-- PLAY ZONE -->
+        <div style="margin-top:30px">
+            <div class="section-head" style="margin-bottom:18px">
+                <p class="kicker">ENGAGEMENT &amp; FINANCIAL LITERACY</p>
+                <h3 style="font-size:22px;color:#0f172a">Play Zone: make money learning more engaging</h3>
+                <p class="section-intro">PiggySweep extends beyond transaction tracking by introducing short activities and challenges that encourage everyday financial awareness.</p>
+            </div>
+            <div class="cards">
+                <article class="card"><div class="card-icon">🪙</div><h3>Coin Matching</h3><p>A light game focused on recognizing and matching coin values, helping users engage with basic money concepts.</p></article>
+                <article class="card"><div class="card-icon">🧠</div><h3>Money Quiz</h3><p>Quiz-style questions covering budgeting, saving, spending choices and financial awareness, with feedback to reinforce learning.</p></article>
+                <article class="card"><div class="card-icon">🎯</div><h3>Savings Quest</h3><p>A challenge-based experience designed to encourage progress towards savings habits and personal goals.</p></article>
+                <article class="card"><div class="card-icon">🏆</div><h3>Piggy Rewards</h3><p>A virtual-points and rewards concept recognizing engagement and learning milestones. Points have no monetary or cash value.</p></article>
+            </div>
+            <p class="section-intro" style="margin-top:12px"><strong>Product distinction:</strong> these activities complement the finance tools; they are not gambling, real-money games or investment-return promises. Show each activity as live or coming soon based on its actual release status.</p>
+        </div>
+
+        <!-- WRITE TO US -->
+        <div style="margin-top:30px">
+            <div class="section-head" style="margin-bottom:18px">
+                <p class="kicker">CUSTOMER SUPPORT &amp; PRODUCT FEEDBACK</p>
+                <h3 style="font-size:22px;color:#0f172a">Write to Us: a feedback loop inside the product</h3>
+                <p class="section-intro">A structured channel for users to report issues, suggest improvements and contribute ideas without leaving PiggySweep.</p>
+            </div>
+            <article class="project-card">
+                <div>
+                    <h3>From user feedback to product improvement</h3>
+                    <p>The Write to Us form supports four feedback types: bug report, improvement, new feature and general feedback. Users provide a subject, description and reply email. The form can generate a reference number and include selected diagnostic context such as app version, platform, device/browser, screen size, current screen and submission time. Passwords are not included.</p>
+                    <p style="margin-top:10px">The intended delivery integration uses Formspree: the form submits to a configured endpoint, which routes feedback to a support inbox. Until the PiggySweep endpoint is configured and real delivery is verified, describe this as an integration in progress. The copy-draft option is a fallback and does not mean the message was delivered.</p>
+                    <div class="pills"><span>Bug Reporting</span><span>Feature Requests</span><span>User Feedback</span><span>Reference ID</span><span>Diagnostic Context</span><span>Formspree Integration</span></div>
+                </div>
+                <div class="project-visual"><div style="font-size:72px">✉️</div></div>
+            </article>
         </div>
 
         <!-- DELIVERY PHASES -->
@@ -1270,11 +1355,11 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
                 <article class="exp-row">
                     <div>
                         <div class="exp-date">PHASE 3</div>
-                        <div class="exp-company">NEXT • PLANNED</div>
+                        <div class="exp-company">IN PROGRESS • TESTING</div>
                     </div>
                     <div>
-                        <h3>Android App Preparation</h3>
-                        <p>Plan to package the existing web application using Capacitor, configure the Android project, and validate navigation, authentication, local persistence, device behavior and backup/restore on physical devices.</p>
+                        <h3>Capacitor Packaging &amp; Android Testing</h3>
+                        <p>Moved the existing PWA into a Capacitor Android project and used Android Studio for build and mobile testing. Current validation focuses on mobile layout, navigation, authentication/session behaviour, local data persistence, profile handling, backup/restore and device-specific behaviour. This is Android testing; Play Store publishing is a separate future release step.</p>
                         <div class="tech-pills"><span>Capacitor</span><span>Android Studio</span><span>Device Testing</span></div>
                     </div>
                 </article>
@@ -1319,8 +1404,8 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
         <div style="margin-top:25px;background:#ffffff;border:1px solid var(--line);border-radius:18px;padding:24px">
             <h3 style="margin-bottom:12px">PiggySweep Product Walkthrough</h3>
             <p style="margin-bottom:16px;color:var(--muted)">
-                Demonstrates the current PWA experience, onboarding, financial dashboard, goal planning,
-                local data handling and authentication workflow.
+                Demonstrates the PWA experience, onboarding, financial dashboard, goals, budgets, Play Zone concepts,
+                profile and feedback workflow, local data handling and authentication. Android packaging and testing use Capacitor and Android Studio.
             </p>
             <video controls preload="metadata" playsinline
                    style="width:100%;border-radius:12px;border:1px solid var(--line);background:#0f172a">
@@ -1328,7 +1413,7 @@ a:focus-visible,button:focus-visible { outline-offset:4px; }
             </video>
             <div style="margin-top:16px;padding:16px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--muted);line-height:1.6">
                 <strong style="color:var(--cyan);display:block;margin-bottom:8px">▶ Demo Overview</strong>
-                <em>"Welcome to PiggySweep, a goal-based personal finance planning PWA. This walkthrough introduces the financial onboarding journey and My Money dashboard, including income, expenses, savings goals and investment tracking. Firebase Authentication manages account access, while financial records are stored locally using account-specific storage and can be backed up or restored through JSON files. The current release is a PWA; Android packaging with Capacitor and Google Play publishing are planned next steps."</em>
+                <em>"Welcome to PiggySweep, a goal-based personal finance planning PWA. This walkthrough introduces the financial onboarding journey and My Money dashboard, including income, expenses, savings goals and investment tracking. Firebase Authentication manages account access, while financial records are stored locally using account-specific storage and can be backed up or restored through JSON files. The web application has been packaged with Capacitor for Android testing in Android Studio. Google Play publishing remains a separate future release step."</em>
             </div>
         </div>
     </div>
